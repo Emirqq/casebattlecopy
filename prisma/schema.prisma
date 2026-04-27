@@ -1,0 +1,136 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id           String   @id @default(cuid())
+  username     String   @unique
+  avatarUrl    String?
+  balance      Int      @default(1000)
+  createdAt    DateTime @default(now())
+  inventory    InventoryItem[]
+  openings     Opening[]
+  battleSeats  BattleSeat[]
+  transactions Transaction[]
+}
+
+model Item {
+  id        String   @id @default(cuid())
+  name      String
+  weapon    String?
+  imageUrl  String
+  price     Int
+  rarity    String
+  caseItems CaseItem[]
+  inventory InventoryItem[]
+  openings  Opening[]
+}
+
+model Case {
+  id        String     @id @default(cuid())
+  slug      String     @unique
+  name      String
+  imageUrl  String
+  price     Int
+  itemCount Int        @default(0)
+  items     CaseItem[]
+  battles   BattleCase[]
+  openings  Opening[]
+}
+
+model CaseItem {
+  id     String @id @default(cuid())
+  caseId String
+  itemId String
+  weight Int    @default(1)
+  case   Case   @relation(fields: [caseId], references: [id], onDelete: Cascade)
+  item   Item   @relation(fields: [itemId], references: [id], onDelete: Cascade)
+
+  @@unique([caseId, itemId])
+}
+
+model InventoryItem {
+  id        String   @id @default(cuid())
+  userId    String
+  itemId    String
+  source    String   @default("case")
+  status    String   @default("owned") // owned | sold | upgraded | contracted
+  createdAt DateTime @default(now())
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  item      Item     @relation(fields: [itemId], references: [id], onDelete: Cascade)
+
+  @@index([userId, status])
+}
+
+model Opening {
+  id        String   @id @default(cuid())
+  userId    String?
+  caseId    String
+  itemId    String
+  battleId  String?
+  seat      Int?
+  isBot     Boolean  @default(false)
+  createdAt DateTime @default(now())
+  user      User?    @relation(fields: [userId], references: [id], onDelete: Cascade)
+  case      Case     @relation(fields: [caseId], references: [id], onDelete: Cascade)
+  item      Item     @relation(fields: [itemId], references: [id], onDelete: Cascade)
+
+  @@index([userId])
+  @@index([battleId])
+}
+
+model Battle {
+  id          String       @id @default(cuid())
+  mode        String       // 1v1 | 2v2 | 1v1v1 | 1v1v1v1
+  size        Int          // total players (2,3,4)
+  status      String       @default("waiting") // waiting | rolling | finished
+  totalPrice  Int          @default(0)
+  createdById String
+  winnerSeat  Int?
+  createdAt   DateTime     @default(now())
+  startedAt   DateTime?
+  finishedAt  DateTime?
+  cases       BattleCase[]
+  seats       BattleSeat[]
+}
+
+model BattleCase {
+  id       String @id @default(cuid())
+  battleId String
+  caseId   String
+  position Int
+  battle   Battle @relation(fields: [battleId], references: [id], onDelete: Cascade)
+  case     Case   @relation(fields: [caseId], references: [id], onDelete: Cascade)
+
+  @@index([battleId])
+}
+
+model BattleSeat {
+  id       String  @id @default(cuid())
+  battleId String
+  userId   String?
+  seat     Int
+  isBot    Boolean @default(false)
+  total    Int     @default(0)
+  battle   Battle  @relation(fields: [battleId], references: [id], onDelete: Cascade)
+  user     User?   @relation(fields: [userId], references: [id], onDelete: SetNull)
+
+  @@unique([battleId, seat])
+}
+
+model Transaction {
+  id        String   @id @default(cuid())
+  userId    String
+  amount    Int
+  kind      String   // bonus | open | sell | upgrade_win | upgrade_lose | contract | battle_join | battle_win
+  meta      String?
+  createdAt DateTime @default(now())
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId])
+}

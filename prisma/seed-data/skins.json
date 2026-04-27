@@ -1,0 +1,1234 @@
+[
+  {
+    "name": "AK-47 | Cartel",
+    "weapon": "AK-47",
+    "image": "https://community.akamai.steamstatic.com/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGIGz3UqlXOLrxM-vMGmW8VNxu5Dx60noTyLwlcK3wiNK0POlPPNSI_GBGmKc_uJ_t-l9ASuywktwtW3dwt79eX6fZlUiCJJ1RbUPtkW8w4LiZe_i4ATYjN8WmH7gznQeZkk4ehM",
+    "rarity": "Classified",
+    "color": "#d32ce6"
+  },
+  {
+    "name": "AK-47 | Nouveau Rouge",
+    "weapon": "AK-47",
+    "image": "https://community.akamai.steamstatic.com/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGIGz3UqlXOLrxM-vMGmW8VNxu5Dx60noTyLwlcK3wipC6s2vY_A6H_6cG3GVwPtJvOhuRz39zBsm5j-HyNqpd32fPVd1AsB3RbEP4xntwdPuM-jl4QaK2NpCzX_23DQJsHjpyGbntg",
+    "rarity": "Classified",
+    "color": "#d32ce6"
+  },
+  {
+    "name": "AK-47 | The Outsiders",
+    "weapon": "AK-47",
+    "image": "https://community.akamai.steamstatic.com/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGIGz3UqlXOLrxM-vMGmW8VNxu5Dx60noTyLwlcK3wiNQu6WRfJtvNeOsAm6Xyfo4tbg7G3-wxxwl5mzRyYqodSrBagMjCZJxELMPthi8lNLgYuzltgHc3ZUFk3sO-7HKrg",
+    "rarity": "Classified",
+    "color": "#d32ce6"
+  },
+  {
+    "name": "AUG | Syd Mead",
+    "weapon": "AUG",
+    "image": "https://community.akamai.steamstatic.com/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGIGz3UqlXOLrxM-vMGmW8VNxu5Dx60noTyLwi5Hf-jFk7uepV7d0JM-eC2aU_uJ_t-l9AX_rkU9-5j_Ry42qcnuQbw5zCcMhQrINtRO-xIHvY-Ow4gPY2Y4UmSngznQeqqNNbYw",
+    "rarity": "Classified",
+    "color": "#d32ce6"
+  },
+  {
+    "name": "AWP | Fever Dream",
+    "weapon": "AWP",
+    "image": "https://community.akamai.steamstatic.com/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGIGz3UqlXOLrxM-vMGmW8VNxu5Dx60noTyLwiYbf_jdk7uW-V7R-OfObAXeR1eZJvOhuRz39kE1w4jiAzNiod3qTOgcgXpAlQ-ML5hjqxtHjZOrrtlHWit9EyCj9iDQJsHhCZP-wUg",
+    "rarity": "Classified",
+    "color": "#d32ce6"
+  },
+  {
+    "name": "AWP | The End",
+    "weapon": "AWP",
+    "image": "https://community.akamai.steamstatic.com/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGIGz3UqlXOLrxM-vMGmW8VNxu5Dx60noTyLwiYbf7i1e0PC5V7BlJc-WAGOvwPlmj-1gSCGn20hytjzSy4r_cy_FZlB1DJdxE7QN50bql4LuNL7g4gTYj9lGnir9iyJXrnE8dWNkiOM",
+    "rarity": "Classified",
+    "color": "#d32ce6"
+  },
+  {
+    "name": "Desert Eagle | Heat Treated",
+    "weapon": "Desert Eagle",
+    "image": "https://community.akamai.steamstatic.com/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGIGz3UqlXOLrxM-vMGmW8VNxu5Dx60noTyL1m5fn8Sdk7uORbKFsJ_yWMWSR0utJuOB7Syy9kBkY4QKJk4jxNWXGbQZ0CZpyTeBf4xO4m9y1Nuy05wHYg4lNySWr3C1Luyhu4LkKA6As5OSJ2JAJXn6j",
+    "rarity": "Classified",
+    "color": "#d32ce6"
+  },
+  {
+    "name": "FAMAS | Afterimage",
+    "weapon": "FAMAS",
+    "image": "https://community.akamai.steamstatic.com/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGIGz3UqlXOLrxM-vMGmW8VNxu5Dx60noTyL3n5vh7h1Y-s2seqtmJf6sHmaEydFwsexoXBa_nBovp3PQn46ucH_COwcoCMchTe4CshG7loG2NrmztFTajoIXyiitiCpLvSk6_a9cBkMHi1qM",
+    "rarity": "Classified",
+    "color": "#d32ce6"
+  },
+  {
+    "name": "Five-SeveN | Fairy Tale",
+    "weapon": "Five-SeveN",
+    "image": "https://community.akamai.steamstatic.com/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGIGz3UqlXOLrxM-vMGmW8VNxu5Dx60noTyL3l4Dl7idN6vyRa7FSJvmFC1iDxPhzvt5tRiihjCIrujqNjsGtdi-UbVUgXJAlRrFfuxi-lNbuPr7ltA3cjtkRzyit2H8c7H1t4O9TT-N7rZbBTJfn",
+    "rarity": "Classified",
+    "color": "#d32ce6"
+  },
+  {
+    "name": "Galil AR | Eco",
+    "weapon": "Galil AR",
+    "image": "https://community.akamai.steamstatic.com/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGIGz3UqlXOLrxM-vMGmW8VNxu5Dx60noTyL2n5rp8SNJ0PG7V6NsLPmfMWKTztF6ueZhW2exwExw4WrcyImrcHmTbQAlWcQkQudYt0O5lNfgP-nh5AOL3otAziz7kGoXua-HTb4P",
+    "rarity": "Classified",
+    "color": "#d32ce6"
+  },
+  {
+    "name": "Glock-18 | Twilight Galaxy",
+    "weapon": "Glock-18",
+    "image": "https://community.akamai.steamstatic.com/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGIGz3UqlXOLrxM-vMGmW8VNxu5Dx60noTyL2kpnj9h1a4s2vebFsH_afC2Sb0tF6ueZhW2e3zR9-5mjcztv8cnjBbQMiA8ZzFLUKtBbsl4LuY77q4AHdj4pNmCz-kGoXudhVSAZp",
+    "rarity": "Classified",
+    "color": "#d32ce6"
+  },
+  {
+    "name": "M4A1-S | Decimator",
+    "weapon": "M4A1-S",
+    "image": "https://community.akamai.steamstatic.com/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGIGz3UqlXOLrxM-vMGmW8VNxu5Dx60noTyL8ypexwjFS4_ega6F_H_eAMWrEwL9JtORqRiSygRI1jDGMnYftb3iUb1dxW5ImFLNftxCxktflZLm2tgaP2otGyn_-hytOvy9q5elQV_A7uvqA6CRSoZY",
+    "rarity": "Classified",
+    "color": "#d32ce6"
+  },
+  {
+    "name": "M4A1-S | Party Animal",
+    "weapon": "M4A1-S",
+    "image": "https://community.akamai.steamstatic.com/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGIGz3UqlXOLrxM-vMGmW8VNxu5Dx60noTyL8ypexwjFS4_ega6F_H_iKC1iRz-d7se1WXzu6mwkY6m2WpYPwJiPTcFNxDcMjEeUIuxK-wNWyPrzj4wePiIxGmCj5jngcuCpvt7wBAKFw-KbJz1aW-PVDUm8",
+    "rarity": "Classified",
+    "color": "#d32ce6"
+  },
+  {
+    "name": "M4A4 | Tooth Fairy",
+    "weapon": "M4A4",
+    "image": "https://community.akamai.steamstatic.com/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGIGz3UqlXOLrxM-vMGmW8VNxu5Dx60noTyL8ypexwiFO0P_6afBSMeWWC2mWwOdkqd5lRi67gVN35WyDwtv8IC-RblVxCpchQLIOuhK8xNG2YbnktAXZjthFxCiohntP8G81tOVu8Qhw",
+    "rarity": "Classified",
+    "color": "#d32ce6"
+  },
+  {
+    "name": "MAG-7 | Justice",
+    "weapon": "MAG-7",
+    "image": "https://community.akamai.steamstatic.com/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGIGz3UqlXOLrxM-vMGmW8VNxu5Dx60noTyL8n5G3wiVI0P-vb_NSKuWAGm6TxNF6ueZhW2fikUt36znWyNz_dn2ROgMhD5EiR7EO5BKxl4DlMLyx7gyNi4hAniz5kGoXuQ9OXJLa",
+    "rarity": "Classified",
+    "color": "#d32ce6"
+  },
+  {
+    "name": "MP9 | Food Chain",
+    "weapon": "MP9",
+    "image": "https://community.akamai.steamstatic.com/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGIGz3UqlXOLrxM-vMGmW8VNxu5Dx60noTyL8js_f_jdk4uL3V6JiL_SsDW-RyOBJvOhuRz39xB5-sGrTnt2tdymVOFApD8dxQLUCuxWxldLkNezjtVDd2t8Uyy_7izQJsHisCKzN8w",
+    "rarity": "Classified",
+    "color": "#d32ce6"
+  },
+  {
+    "name": "Nova | Hyper Beast",
+    "weapon": "Nova",
+    "image": "https://community.akamai.steamstatic.com/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGIGz3UqlXOLrxM-vMGmW8VNxu5Dx60noTyL_kYDhwiFO0PyhfqVSKOmDC3WSxO9lpN5lRi67gVMhsGrTmd2seH6XbA4pDZR1EbMCtES8m4fiNenl4FDcid1Az32ri3tM8G81tMCTwFwB",
+    "rarity": "Classified",
+    "color": "#d32ce6"
+  },
+  {
+    "name": "P250 | Cartel",
+    "weapon": "P250",
+    "image": "https://community.akamai.steamstatic.com/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGIGz3UqlXOLrxM-vMGmW8VNxu5Dx60noTyLhzMOwwiNK0OL8PfRSI_GBGmKc_uJ_t-l9AX2wlh906m7Uy4v_cXqWaA4gCpUmQLMNsBO_ltfiYuPltAHbgthGmyzgznQeqxXZ9kg",
+    "rarity": "Classified",
+    "color": "#d32ce6"
+  },
+  {
+    "name": "P250 | Visions",
+    "weapon": "P250",
+    "image": "https://community.akamai.steamstatic.com/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGIGz3UqlXOLrxM-vMGmW8VNxu5Dx60noTyLhzMOwwiVI0OL8PfRSNvmAB2ie0tF6ueZhW2fmzERx5jyHm4v_dXvGaQR2WJF2QrIMsxW_w9PvN-zhtgXXiokWn3_6kGoXuc_iGAKZ",
+    "rarity": "Classified",
+    "color": "#d32ce6"
+  },
+  {
+    "name": "P90 | Trigon",
+    "weapon": "P90",
+    "image": "https://community.akamai.steamstatic.com/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGIGz3UqlXOLrxM-vMGmW8VNxu5Dx60noTyLhx8bf_jdk_6v-V7B_KfecAFicyOl-pK9vGi3nlEt24GnSwoypc3rFbQ52XsN0EOFcshfuwYa1NbzktVTZ3ohN02yg2RSFidN_",
+    "rarity": "Classified",
+    "color": "#d32ce6"
+  },
+  {
+    "name": "SCAR-20 | Cyrex",
+    "weapon": "SCAR-20",
+    "image": "https://community.akamai.steamstatic.com/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGIGz3UqlXOLrxM-vMGmW8VNxu5Dx60noTyLinZfyr3Jk7OeRe6dsMs-QF3WV2dF6ueZhW2fgzUR_52nUzYugICnCPVImApYkRO8NtkLtw4a1Nbzn7lSN2oITnCr5kGoXuXXxbesR",
+    "rarity": "Classified",
+    "color": "#d32ce6"
+  },
+  {
+    "name": "SSG 08 | Bloodshot",
+    "weapon": "SSG 08",
+    "image": "https://community.akamai.steamstatic.com/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGIGz3UqlXOLrxM-vMGmW8VNxu5Dx60noTyLijZGwpR1Y-s29e6M9eM-HB2Sbzetkj-1gSCGn201wsjnUm9qrI3OXaAQnDsZwTbIDtxnpl9W0P7i35FfW3toTzC6q2ixXrnE8w4eIHZQ",
+    "rarity": "Classified",
+    "color": "#d32ce6"
+  },
+  {
+    "name": "Tec-9 | Fuel Injector",
+    "weapon": "Tec-9",
+    "image": "https://community.akamai.steamstatic.com/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGIGz3UqlXOLrxM-vMGmW8VNxu5Dx60noTyLlm5W5wiVI0Oara_1SM-WDC3WTye9kt-RtcCW6khUz_Wvcy9qgdCnEPQ8hApBzRrQJ4RW7moDgMLzktFDZiI5HnyWr3ChN5yp1o7FVg4hNKG8",
+    "rarity": "Classified",
+    "color": "#d32ce6"
+  },
+  {
+    "name": "UMP-45 | Wild Child",
+    "weapon": "UMP-45",
+    "image": "https://community.akamai.steamstatic.com/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGIGz3UqlXOLrxM-vMGmW8VNxu5Dx60noTyLkk4a0qB1Y-s27ZbRSI_yGGmSY_uV_s-pWQyC0nQlpt2iHmNyqd3KVOlB0D5YlTeZb5xjsx9PjZOjl4VCNgt1EnC77iSMf7jErvbhWyVIDbA",
+    "rarity": "Classified",
+    "color": "#d32ce6"
+  },
+  {
+    "name": "USP-S | Target Acquired",
+    "weapon": "USP-S",
+    "image": "https://community.akamai.steamstatic.com/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGIGz3UqlXOLrxM-vMGmW8VNxu5Dx60noTyLkjYbf7itX6vytbbZSIf2sB2mExOJ6ueZsQSq2qhAmtDiLjo7GLSLANkI-XpZxE-4MtxW5ldeyZbvq51PXid9EzSr6iSof7y1t47lQAqRxrvCEjxaBb-PT-N1SiA",
+    "rarity": "Classified",
+    "color": "#d32ce6"
+  },
+  {
+    "name": "AUG | Colony",
+    "weapon": "AUG",
+    "image": "https://community.akamai.steamstatic.com/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGIGz3UqlXOLrxM-vMGmW8VNxu5Dx60noTyLwi5Hf7i1k_OKva6FSLfGBB2mV_uJ_t-l9ASjnk0p06jmHmIyveCmWPFAiCZUlF-BcsEW4wYW2ZO3q4QLf3Y9NmC3gznQeEvKGZSQ",
+    "rarity": "Consumer Grade",
+    "color": "#b0c3d9"
+  },
+  {
+    "name": "AUG | Storm",
+    "weapon": "AUG",
+    "image": "https://community.akamai.steamstatic.com/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGIGz3UqlXOLrxM-vMGmW8VNxu5Dx60noTyLwi5Hf7i1k_OaheqlrMv-dGlicyOl-pK84GCzkxEkisDnUz42qc32WaVckW5AhQeVYs0W9wIfuP7i34laK2d9G02yg2S19fQbA",
+    "rarity": "Consumer Grade",
+    "color": "#b0c3d9"
+  },
+  {
+    "name": "CZ75-Auto | Indigo",
+    "weapon": "CZ75-Auto",
+    "image": "https://community.akamai.steamstatic.com/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGIGz3UqlXOLrxM-vMGmW8VNxu5Dx60noTyLyhMG1_B1I4M2nZqBkJ_-sD2mU_ulktfhWQyC0nQlp5zmGzo2rcXnDbFJxDZoiRrII40Puw9a2YeOwsgbdjNlCnCSoiilK6TErvbj4Q9U5dw",
+    "rarity": "Consumer Grade",
+    "color": "#b0c3d9"
+  },
+  {
+    "name": "Dual Berettas | Heist",
+    "weapon": "Dual Berettas",
+    "image": "https://community.akamai.steamstatic.com/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGIGz3UqlXOLrxM-vMGmW8VNxu5Dx60noTyL0kp_0-B1a4s2mba1-NM-DAmae0tFxouRsQRa_nBovp3OEn437c3yTZlJ0DpB3QORfshS8xIfjYe3n7wTbi98Wzn2o2ilPuilv_a9cBr2drwX0",
+    "rarity": "Consumer Grade",
+    "color": "#b0c3d9"
+  },
+  {
+    "name": "FAMAS | Contrast Spray",
+    "weapon": "FAMAS",
+    "image": "https://community.akamai.steamstatic.com/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGIGz3UqlXOLrxM-vMGmW8VNxu5Dx60noTyL3n5vh7h1I_829eLZsOc-fB2CY1aByseI-THiwxU1-4j7dnI74eHOUaQciC8d4ReEC4RLpwNXmYrjh4wfflcsbmhid3JyN",
+    "rarity": "Consumer Grade",
+    "color": "#b0c3d9"
+  },
+  {
+    "name": "Five-SeveN | Coolant",
+    "weapon": "Five-SeveN",
+    "image": "https://community.akamai.steamstatic.com/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGIGz3UqlXOLrxM-vMGmW8VNxu5Dx60noTyL3l4Dl7idN6vyRYL1SJOWQGnSvxvxzte9WQyC0nQlp5m_cmNqueH7EbQAiXpN0FO5YtBK_x4XgMrjmswON2osQzn77iipJ6zErvbgVYFr6QQ",
+    "rarity": "Consumer Grade",
+    "color": "#b0c3d9"
+  },
+  {
+    "name": "G3SG1 | Orange Kimono",
+    "weapon": "G3SG1",
+    "image": "https://community.akamai.steamstatic.com/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGIGz3UqlXOLrxM-vMGmW8VNxu5Dx60noTyL2zYXnrB1T9s2lYaliLv-sCm6RzOF4tPJWQDuymxoijDGMnYftby6RPwN1DZQmTbYL5kO9mt2zN-3j4wSKjdpDmy2tjCNN6ik45ewAAKs7uvqAyDUCDXE",
+    "rarity": "Consumer Grade",
+    "color": "#b0c3d9"
+  },
+  {
+    "name": "Galil AR | Sage Spray",
+    "weapon": "Galil AR",
+    "image": "https://community.akamai.steamstatic.com/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGIGz3UqlXOLrxM-vMGmW8VNxu5Dx60noTyL2n5rp8SNJ0OG-V7d9MvGKMWOV0utkpN56Ti62qhEutDWR1N6qcCqSOgEiCsMhQLZftxnpxtfkP-Ph71eMjYtDmCX3jytO5nlt5OkcEf1yc_oaZQU",
+    "rarity": "Consumer Grade",
+    "color": "#b0c3d9"
+  },
+  {
+    "name": "M249 | Sage Camo",
+    "weapon": "M249",
+    "image": "https://community.akamai.steamstatic.com/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGIGz3UqlXOLrxM-vMGmW8VNxu5Dx60noTyL8zMK5wipC4M2kfapqLPWsCmKDwPpJvOhuRz39lkUisWTSmIz7I3uValQjXMEmE-AO4Ea9k9HvZLy27g2P3otEnnj8iDQJsHjxYKi7jg",
+    "rarity": "Consumer Grade",
+    "color": "#b0c3d9"
+  },
+  {
+    "name": "MAC-10 | Strats",
+    "weapon": "MAC-10",
+    "image": "https://community.akamai.steamstatic.com/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGIGz3UqlXOLrxM-vMGmW8VNxu5Dx60noTyL8n5WxrR1T9s24bbZ5KfecHXeCwPdJsu18Sha_nBovp3PTmIuoJ3yVa1clXMB4TbEOsBHtwdHiZO-x7gWN2d8XyS_4i3xM53k4_a9cBrlyT3NZ",
+    "rarity": "Consumer Grade",
+    "color": "#b0c3d9"
+  },
+  {
+    "name": "MAG-7 | Navy Sheen",
+    "weapon": "MAG-7",
+    "image": "https://community.akamai.steamstatic.com/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGIGz3UqlXOLrxM-vMGmW8VNxu5Dx60noTyL8n5G3wiNW0Pyvfr1SM_iaAGKvzedxuPUnHyu2lh8j5zuBzYv4Iy3FZwJzCJMlQbEL5hO-ltPnP7zmswHY39hAxTK-0H11955Myw",
+    "rarity": "Consumer Grade",
+    "color": "#b0c3d9"
+  },
+  {
+    "name": "MP5-SD | Lime Hex",
+    "weapon": "MP5-SD",
+    "image": "https://community.akamai.steamstatic.com/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGIGz3UqlXOLrxM-vMGmW8VNxu5Dx60noTyL8jsPz-R1I_82iYaloH_iWFlicyOl-pK8_HH22xxl34DiHz9mreS-TblN2C5FwFOQN4Rjpx9C1Yunh4gfbg91M02yg2SHKjRF4",
+    "rarity": "Consumer Grade",
+    "color": "#b0c3d9"
+  },
+  {
+    "name": "MP7 | Scorched",
+    "weapon": "MP7",
+    "image": "https://community.akamai.steamstatic.com/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGIGz3UqlXOLrxM-vMGmW8VNxu5Dx60noTyL8jsHf7jJk6_O-eKhoH_yaCW-Ej7kvs7c_GXrhwk4lsWzUztn7ciiUPFQgW5clE-UC5Bbtx9TmY-m041DAy9USq3Wit9I",
+    "rarity": "Consumer Grade",
+    "color": "#b0c3d9"
+  },
+  {
+    "name": "MP9 | Dizzy",
+    "weapon": "MP9",
+    "image": "https://community.akamai.steamstatic.com/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGIGz3UqlXOLrxM-vMGmW8VNxu5Dx60noTyL8js_f7i1e0PaqeKV5H-OEB3Wc_uxhj-1gSCGn204k5mXQwoz4dnrDaQ92CMB3R7FZtxa4mtfkZuyx5gHb2YNNz336jyxXrnE8H46mzhg",
+    "rarity": "Consumer Grade",
+    "color": "#b0c3d9"
+  },
+  {
+    "name": "MP9 | Storm",
+    "weapon": "MP9",
+    "image": "https://community.akamai.steamstatic.com/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGIGz3UqlXOLrxM-vMGmW8VNxu5Dx60noTyL8js_f7i1k_OaheqlrMv-dGlicyOl-pK8_S3zjxRh_5mmGn9epIymQPQBxDpQlFuUJ5xa6kt2yZLjkswLY2ooT02yg2WH9Y1dp",
+    "rarity": "Consumer Grade",
+    "color": "#b0c3d9"
+  },
+  {
+    "name": "Nova | Mandrel",
+    "weapon": "Nova",
+    "image": "https://community.akamai.steamstatic.com/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGIGz3UqlXOLrxM-vMGmW8VNxu5Dx60noTyL_kYDhwipC0Pa7a7B-H_eBC36vzedxuPUnS3DqzRsk4mvUwt2gcXLFPwZyDZZ0R-MM5xa4lNXvNurhsg2Kg94QxTK-0H0uEiuY9A",
+    "rarity": "Consumer Grade",
+    "color": "#b0c3d9"
+  },
+  {
+    "name": "Nova | Walnut",
+    "weapon": "Nova",
+    "image": "https://community.akamai.steamstatic.com/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGIGz3UqlXOLrxM-vMGmW8VNxu5Dx60noTyL_kYDhwiFO0OWvZKp4NM-dAXGR_uJ_t-l9ASjrlk9042Xcm42geSmXa1UpX5F3Qe4Pu0Trl4K2Y-6z41GNgo9ExSXgznQek14KNvA",
+    "rarity": "Consumer Grade",
+    "color": "#b0c3d9"
+  },
+  {
+    "name": "P250 | Mint Kimono",
+    "weapon": "P250",
+    "image": "https://community.akamai.steamstatic.com/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGIGz3UqlXOLrxM-vMGmW8VNxu5Dx60noTyLhzMOwwjFL0PmnZatjL8-XB2adzuByo95lRi67gVNx4z_cn934JHvDOAEnCcZxTeZbsUTrxoGyMrzi4FHZiI0Uzyn-3HtM8G81tISNzIT_",
+    "rarity": "Consumer Grade",
+    "color": "#b0c3d9"
+  },
+  {
+    "name": "P90 | Desert Halftone",
+    "weapon": "P90",
+    "image": "https://community.akamai.steamstatic.com/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGIGz3UqlXOLrxM-vMGmW8VNxu5Dx60noTyLhx8bf9TZk_PujeKhoH_OSA2ivzedxuPUnGXHqkE1-4mjdz9eudnuTPQ8gWZpzE-Ve5hOxlNHgY-jj5VPY39gXyjK-0H2RUgwoBA",
+    "rarity": "Consumer Grade",
+    "color": "#b0c3d9"
+  },
+  {
+    "name": "PP-Bizon | Bizoom",
+    "weapon": "PP-Bizon",
+    "image": "https://community.akamai.steamstatic.com/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGIGz3UqlXOLrxM-vMGmW8VNxu5Dx60noTyLzl4zv8x1T9veRa6V_H-eBD3evw-dsv-9WQyC0nQlp6zzdzI6rIHOealMiCJolEOVb5EPrx9PuN7_i5lHW2d9NySj2jy9N6DErvbhOwQNAJg",
+    "rarity": "Consumer Grade",
+    "color": "#b0c3d9"
+  },
+  {
+    "name": "PP-Bizon | Thermal Currents",
+    "weapon": "PP-Bizon",
+    "image": "https://community.akamai.steamstatic.com/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGIGz3UqlXOLrxM-vMGmW8VNxu5Dx60noTyLzl4zv8x1T9veRb6FiIvmBCnSv0vt4ouh6Sha_nBovp3PRmdysdHLCZwUjDsB1FOcJ4BW4mobhZu3q7wyKj4MTzCj2jHhJu30-_a9cBrr9UcuO",
+    "rarity": "Consumer Grade",
+    "color": "#b0c3d9"
+  },
+  {
+    "name": "R8 Revolver | Inlay",
+    "weapon": "R8 Revolver",
+    "image": "https://community.akamai.steamstatic.com/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGIGz3UqlXOLrxM-vMGmW8VNxu5Dx60noTyLjm4Dv8TRe_c2pe5t_JeacAnGV09F3s-BnWyGmhiIloTKLgIrGLSLANkI-A5cjFOBc5ES_m921Ybux5gXeioMQzy2ojHlMuChi4bxQVfFzr6OEjRaBb-Nm3twhXg",
+    "rarity": "Consumer Grade",
+    "color": "#b0c3d9"
+  },
+  {
+    "name": "SCAR-20 | Short Ochre",
+    "weapon": "SCAR-20",
+    "image": "https://community.akamai.steamstatic.com/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGIGz3UqlXOLrxM-vMGmW8VNxu5Dx60noTyLinZfyr3Jk_P2RZbF-NPGBCliDwu9k4rFWQyC0nQlp4znSyo39dHifa1ciD8EjF-QCshmwxtKxY7_qsQze2olFyS-shyocvDErvbjS8vcY3w",
+    "rarity": "Consumer Grade",
+    "color": "#b0c3d9"
+  },
+  {
+    "name": "SG 553 | Lush Ruins",
+    "weapon": "SG 553",
+    "image": "https://community.akamai.steamstatic.com/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGIGz3UqlXOLrxM-vMGmW8VNxu5Dx60noTyLimcO1qx1a7s28fa1jM8-UHGKVz9F6ueZhW2fmkU4jtTzSw42pc3LEOgJ2ApZ4FORZ50XtxoXiPr-z5FDcit9ExXqvkGoXubXo--Tz",
+    "rarity": "Consumer Grade",
+    "color": "#b0c3d9"
+  },
+  {
+    "name": "SSG 08 | Grey Smoke",
+    "weapon": "SSG 08",
+    "image": "https://community.akamai.steamstatic.com/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGIGz3UqlXOLrxM-vMGmW8VNxu5Dx60noTyLijZGwpR1I4PGmV6ZhL-KRMWWH_uJ_t-l9ASu1kBt_sD_dzN-pcX6ROlMgD5d5FuQP5hC4m4XlY-PkswbdjN8Xn3_gznQeOZ1jkG0",
+    "rarity": "Consumer Grade",
+    "color": "#b0c3d9"
+  },
+  {
+    "name": "SSG 08 | Sans Comic",
+    "weapon": "SSG 08",
+    "image": "https://community.akamai.steamstatic.com/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGIGz3UqlXOLrxM-vMGmW8VNxu5Dx60noTyLijZGwpR1T9veRa6tgKfOsHW-R0etlj-1gSCGn20wl5W3VmImqcCmWOlAjXpolR-MP50Wwl9DmMOix5QXZ2d5EzSWqi3tXrnE8nx7Jn58",
+    "rarity": "Consumer Grade",
+    "color": "#b0c3d9"
+  },
+  {
+    "name": "Sawed-Off | Parched",
+    "weapon": "Sawed-Off",
+    "image": "https://community.akamai.steamstatic.com/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGIGz3UqlXOLrxM-vMGmW8VNxu5Dx60noTyLin4Hl-S1d6c2mcZtpJeOWHHOvw-J5v-xWQyC0nQlp52_dnoqsdHjDaAInDMNzQbZc4ROxxIbgMrmxtALagtgXniiv3HxOuDErvbjDfqqgDA",
+    "rarity": "Consumer Grade",
+    "color": "#b0c3d9"
+  },
+  {
+    "name": "Tec-9 | Phoenix Chalk",
+    "weapon": "Tec-9",
+    "image": "https://community.akamai.steamstatic.com/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGIGz3UqlXOLrxM-vMGmW8VNxu5Dx60noTyLlm5W5wipC0OKmZ6FjKeisGmaX0tF6ue1oTBa_nBovp3PTnNuoIH2TPw9xApB0EOQK5kK-k93gNrjr4QSPj4JEnH__jy0d7io4_a9cBnAYh6IJ",
+    "rarity": "Consumer Grade",
+    "color": "#b0c3d9"
+  },
+  {
+    "name": "UMP-45 | Green Swirl",
+    "weapon": "UMP-45",
+    "image": "https://community.akamai.steamstatic.com/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGIGz3UqlXOLrxM-vMGmW8VNxu5Dx60noTyLkk4a0qB1I4PGmV6x4JeObB2GE_upzo-B9cCW6khUz_TiBmIv4dCjBZ1RzX5txE-IOt0Lsk9zkY7y04QfYjN4RmCv22nxAvXp1o7FVlEIYfjU",
+    "rarity": "Consumer Grade",
+    "color": "#b0c3d9"
+  },
+  {
+    "name": "XM1014 | Canvas Cloud",
+    "weapon": "XM1014",
+    "image": "https://community.akamai.steamstatic.com/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGIGz3UqlXOLrxM-vMGmW8VNxu5Dx60noTyLpk8ewrHZk5-uRa6hiNfSsDWadztF6ueZhW2fgwhghtm3SzN6qcS6fbwV1DpV5QO8P5kTulIW0P7vj4ATbjdlEm3iokGoXuQMfRK1o",
+    "rarity": "Consumer Grade",
+    "color": "#b0c3d9"
+  },
+  {
+    "name": "M4A4 | Howl",
+    "weapon": "M4A4",
+    "image": "https://community.akamai.steamstatic.com/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGIGz3UqlXOLrxM-vMGmW8VNxu5Dx60noTyL8ypexwiFO0P_6afVSKP-EAm6extF6ueZhW2exwkl2tmTXwt39eCiUPQR2DMN4TOVetUK8xoLgM-K341eM2otDnC6okGoXufBz_TAB",
+    "rarity": "Contraband",
+    "color": "#e4ae39"
+  },
+  {
+    "name": "AK-47 | Aphrodite",
+    "weapon": "AK-47",
+    "image": "https://community.akamai.steamstatic.com/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGIGz3UqlXOLrxM-vMGmW8VNxu5Dx60noTyLwlcK3wiVI7PqRaa9SJPqaB2mvzedxuPUnGCi3wktzt2rRn92pdXuXbA4iDcdxQOIMsBK4k9S2Zeiw4lTdjdhNyTK-0H1wmrL4zA",
+    "rarity": "Covert",
+    "color": "#eb4b4b"
+  },
+  {
+    "name": "AWP | Lightning Strike",
+    "weapon": "AWP",
+    "image": "https://community.akamai.steamstatic.com/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGIGz3UqlXOLrxM-vMGmW8VNxu5Dx60noTyLwiYbf_C9k4_upYLBjKf6UMWaH0dF6ueZhW2frwU1_sW2EmNyvc32RZwMpCpcjQ-EJ4xbtmt3gYezk4wzb3tpAy3mrkGoXubsGIfVN",
+    "rarity": "Covert",
+    "color": "#eb4b4b"
+  },
+  {
+    "name": "M4A1-S | Golden Coil",
+    "weapon": "M4A1-S",
+    "image": "https://community.akamai.steamstatic.com/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGIGz3UqlXOLrxM-vMGmW8VNxu5Dx60noTyL8ypexwjFS4_ega6F_H_eAMWrEwL9lj_JnTiK2lxQztgKClYP9HifOOV5kFJclQ-Jb5xW-m9CxPuLq4QTfjd0XzyX6jCpL6X5o5OgDVfYn_a2Ci1rfcepqgV49FrE",
+    "rarity": "Covert",
+    "color": "#eb4b4b"
+  },
+  {
+    "name": "Sawed-Off | The Kraken",
+    "weapon": "Sawed-Off",
+    "image": "https://community.akamai.steamstatic.com/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGIGz3UqlXOLrxM-vMGmW8VNxu5Dx60noTyLin4Hl-S1d6c2tfZt-IeeWCmiWx9F5s_VmXzy-hSIrujqNjsH_eXmWaVRyXpF3EOZe5Bm8w93gMbzn4waPg98Tzir8jHwbuC5p4uZUT-N7rZ8ILI16",
+    "rarity": "Covert",
+    "color": "#eb4b4b"
+  },
+  {
+    "name": "★ Bayonet | Scorched",
+    "weapon": "Bayonet",
+    "image": "https://community.akamai.steamstatic.com/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGIGz3UqlXOLrxM-vMGmW8VNxu5Dx60noTyLzn4_v8ydP0OG-V6BsMOCfC1icyOl-pK86HS_gwEx3sT_Ryon7c3ySO1UkCpt3Q7EL4BGxwd3lNeq24QTYiI1H02yg2fqRNo8T",
+    "rarity": "Covert",
+    "color": "#eb4b4b"
+  },
+  {
+    "name": "★ Bowie Knife | Safari Mesh",
+    "weapon": "Bowie Knife",
+    "image": "https://community.akamai.steamstatic.com/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGIGz3UqlXOLrxM-vMGmW8VNxu5Dx60noTyL6kJ_m-B1I-uC4YbJsLM-RAXCZxNFloN5kSjq7qgkmvQKJk4jxNWWfZgMnD5ZyF7ICs0awxoHkZuyw7wHYi9kUn3qvh3hI7no-5elXUKot5OSJ2DhCNq62",
+    "rarity": "Covert",
+    "color": "#eb4b4b"
+  },
+  {
+    "name": "★ Butterfly Knife | Rust Coat",
+    "weapon": "Butterfly Knife",
+    "image": "https://community.akamai.steamstatic.com/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGIGz3UqlXOLrxM-vMGmW8VNxu5Dx60noTyL6kJ_m-B1Z-ua6bbZrLOmsD3av0vpzte1WRCe6kxgYvjiBk5r0by7EbQMjDcdwF-UC4BG4l9C1ZO7q4VbYj49AySmt339LvH1ptupXUKA7uvqA1J4Dodk",
+    "rarity": "Covert",
+    "color": "#eb4b4b"
+  },
+  {
+    "name": "★ Falchion Knife | Doppler",
+    "weapon": "Falchion Knife",
+    "image": "https://community.akamai.steamstatic.com/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGIGz3UqlXOLrxM-vMGmW8VNxu5Dx60noTyL6kJ_m-B1d7v6tYK1iLs-SA1iC1Oxvj-xoXSu_kBQ9tjm6lob-KT-JagN2CZV4QbYPtBe9ktDvYeLrsgLaiYtCmyT2j38aunpq47sEUfVx-LqX0V96C3cwag",
+    "rarity": "Covert",
+    "color": "#eb4b4b"
+  },
+  {
+    "name": "★ Flip Knife | Doppler",
+    "weapon": "Flip Knife",
+    "image": "https://community.akamai.steamstatic.com/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGIGz3UqlXOLrxM-vMGmW8VNxu5Dx60noTyL6kJ_m-B1d4_u-V6VgH_ScHnecxPxJoOloXCznqhEutDWR1IuudniQZgMiApAlFLJftRjqkYfuNOKx4lfejtoUzCSvjH5PvSo56rwcEf1y_87DeTE",
+    "rarity": "Covert",
+    "color": "#eb4b4b"
+  },
+  {
+    "name": "★ Gut Knife | Doppler",
+    "weapon": "Gut Knife",
+    "image": "https://community.akamai.steamstatic.com/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGIGz3UqlXOLrxM-vMGmW8VNxu5Dx60noTyL6kJ_m-B1c-uaRaalSJP-DHmuV09FmuOB6SnqMmRQguynLw96hIC2VagV0W5dzQ7VYsBiwldyyZO3m5VaLiN8WxXmt33sd5y5j4vFCD_RERtuZEw",
+    "rarity": "Covert",
+    "color": "#eb4b4b"
+  },
+  {
+    "name": "★ Huntsman Knife | Doppler",
+    "weapon": "Huntsman Knife",
+    "image": "https://community.akamai.steamstatic.com/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGIGz3UqlXOLrxM-vMGmW8VNxu5Dx60noTyL6kJ_m-B1P7vG6YadsLM-SA1iUzv5mvOR7cDm7lA4i4QKJk4jxNWXBag91D5JxRu8N5hC_mtflP-6x7gSMio5Nnius2i1Avypisr0CVadx5OSJ2A8DtsQk",
+    "rarity": "Covert",
+    "color": "#eb4b4b"
+  },
+  {
+    "name": "★ Karambit | Doppler",
+    "weapon": "Karambit",
+    "image": "https://community.akamai.steamstatic.com/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGIGz3UqlXOLrxM-vMGmW8VNxu5Dx60noTyL6kJ_m-B1Q7uCvZaZkNM-SA1iUzv5mvOR7cDm7lA4i4gKJk4jxNWXFb1cpDJR2FOFbsBTql9bjYbzq7gPZiN1MxH7_2ytNuCdpte1UB_Ui5OSJ2GbkVqni",
+    "rarity": "Covert",
+    "color": "#eb4b4b"
+  },
+  {
+    "name": "★ Kukri Knife | Scorched",
+    "weapon": "Kukri Knife",
+    "image": "https://community.akamai.steamstatic.com/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGIGz3UqlXOLrxM-vMGmW8VNxu5Dx60noTyL6kJ_m-B1Q-vm8YZt-MM-XD3eAzetJvOhuRz39kUpw42zRnoz7InOeOAd2XpQiQ7Ve5xixm9HhMe3l5wCI2YxHxS_2iDQJsHhKp4l7vg",
+    "rarity": "Covert",
+    "color": "#eb4b4b"
+  },
+  {
+    "name": "★ M9 Bayonet | Slaughter",
+    "weapon": "M9 Bayonet",
+    "image": "https://community.akamai.steamstatic.com/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGIGz3UqlXOLrxM-vMGmW8VNxu5Dx60noTyL6kJ_m-B1Wts2sab1iLvWHMWad_vRzsvNocCW6khUz_WXQyN6uIH-fbFd1XJcjFuEJ50W6xofhYuu05AHdiYxNn3-viXlM7C91o7FVpU-ja-I",
+    "rarity": "Covert",
+    "color": "#eb4b4b"
+  },
+  {
+    "name": "★ Nomad Knife | Damascus Steel",
+    "weapon": "Nomad Knife",
+    "image": "https://community.akamai.steamstatic.com/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGIGz3UqlXOLrxM-vMGmW8VNxu5Dx60noTyL6kJ_m-B1U-uaqZ6t_H_GCMWORzO9ls_R6cCW6khUz_W6Hyt-vJXifaQFzCJNzR7RZsxLsx4K0N-_m5AbZg9kXn3r93S1NvHx1o7FV4ooHb_M",
+    "rarity": "Covert",
+    "color": "#eb4b4b"
+  },
+  {
+    "name": "★ Paracord Knife | Forest DDPAT",
+    "weapon": "Paracord Knife",
+    "image": "https://community.akamai.steamstatic.com/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGIGz3UqlXOLrxM-vMGmW8VNxu5Dx60noTyL6kJ_m-B1Y4OCqV6x0H_SXHmaE_uJ_t-l9AS3gkB4m5myGyo6sciifPQdzD8RzR-JctBjsl9bvMOzjslPYgopAyi_gznQexg-GN_M",
+    "rarity": "Covert",
+    "color": "#eb4b4b"
+  },
+  {
+    "name": "★ Shadow Daggers | Gamma Doppler",
+    "weapon": "Shadow Daggers",
+    "image": "https://community.akamai.steamstatic.com/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGIGz3UqlXOLrxM-vMGmW8VNxu5Dx60noTyL6kJ_m-B1L-uGmV6VgH_eSA2qR_up5oPFlSjuMhRUmoDjRpYPwJiPTcFB2DJB3F-4LsBG_kd21Ne23tVPait9HmX6t2n5P6i1q5uoHAKJwq6TJz1aWm5wQ7fM",
+    "rarity": "Covert",
+    "color": "#eb4b4b"
+  },
+  {
+    "name": "★ Skeleton Knife | Tiger Tooth",
+    "weapon": "Skeleton Knife",
+    "image": "https://community.akamai.steamstatic.com/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGIGz3UqlXOLrxM-vMGmW8VNxu5Dx60noTyL6kJ_m-B1I5PeibbBiLs-SAFiEyOlzot5mXSi9khgYvzSCkpu3dyjBagAlXMB4R-YOt0OxlIe2ZuuztQXdjNhAySn52i5Mv3tj5rlRUb1lpPPHmhG_Tw",
+    "rarity": "Covert",
+    "color": "#eb4b4b"
+  },
+  {
+    "name": "★ Survival Knife | Doppler",
+    "weapon": "Survival Knife",
+    "image": "https://community.akamai.steamstatic.com/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGIGz3UqlXOLrxM-vMGmW8VNxu5Dx60noTyL6kJ_m-B1Y7vyne5tsLc-RAmaTyv5zsfNlcCSyhx8rtjSfn4vGLSLANkI-CJQjFrQJsxHrktfjMu6z5gbYi49FyS-rh3lJuHxst7oLAvci-PDehxaBb-MyRwuVrw",
+    "rarity": "Covert",
+    "color": "#eb4b4b"
+  },
+  {
+    "name": "★ Talon Knife | Marble Fade",
+    "weapon": "Talon Knife",
+    "image": "https://community.akamai.steamstatic.com/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGIGz3UqlXOLrxM-vMGmW8VNxu5Dx60noTyL6kJ_m-B1M5vahf6lsK_WBMWad_uN3ouNlSha1lBkijCqMnoDuHifOOV5kFJMlQecC4RW5x4bkMLvgsgGP2IIXzy_-iysaunlo4bwEBfYh_aLS3A7fcepqAVr8ibw",
+    "rarity": "Covert",
+    "color": "#eb4b4b"
+  },
+  {
+    "name": "AK-47 | Baroque Purple",
+    "weapon": "AK-47",
+    "image": "https://community.akamai.steamstatic.com/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGIGz3UqlXOLrxM-vMGmW8VNxu5Dx60noTyLwlcK3wipC0OSrZqF5L8-DG3WAzetJvOhuRz39wEgl6jyBwtqtJS6QbFRzApIkR-YLsRe6wdDvZung4gHbjd4XyH7_iTQJsHhGzMbuTA",
+    "rarity": "Industrial Grade",
+    "color": "#5e98d9"
+  },
+  {
+    "name": "AUG | Condemned",
+    "weapon": "AUG",
+    "image": "https://community.akamai.steamstatic.com/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGIGz3UqlXOLrxM-vMGmW8VNxu5Dx60noTyLwi5Hf7jJk4ve9YJtrL-KWHXOvx-dktd5lRi67gVNztmXQz92qcyiWPQAiDZZ1ELUD5kG8wNW0P762tVaMjopBxCX3jiMc8G81tDi9HBdS",
+    "rarity": "Industrial Grade",
+    "color": "#5e98d9"
+  },
+  {
+    "name": "CZ75-Auto | Copper Fiber",
+    "weapon": "CZ75-Auto",
+    "image": "https://community.akamai.steamstatic.com/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGIGz3UqlXOLrxM-vMGmW8VNxu5Dx60noTyLyhMG1_B1a4s2tabZvL_6sCG6SxPxJs_s-Gha_nBovp3OEzIn8c3qUagUiD5p0FuILtUKxm4e2Mrzms1baiIpCyiiqhi1J6yxo_a9cBnTQQcTV",
+    "rarity": "Industrial Grade",
+    "color": "#5e98d9"
+  },
+  {
+    "name": "Desert Eagle | Tilted",
+    "weapon": "Desert Eagle",
+    "image": "https://community.akamai.steamstatic.com/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGIGz3UqlXOLrxM-vMGmW8VNxu5Dx60noTyL1m5fn8Sdk7OeRZ7JoMuCSHXSvwP9jsd5tSii0mRgYvzSCkpu3cH-UOgV2D8RyQrMKsRW-mtWyPunr4VeNjIhMmX6ojigY7y9v5ehUA71lpPMO4MWI5A",
+    "rarity": "Industrial Grade",
+    "color": "#5e98d9"
+  },
+  {
+    "name": "Dual Berettas | Stained",
+    "weapon": "Dual Berettas",
+    "image": "https://community.akamai.steamstatic.com/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGIGz3UqlXOLrxM-vMGmW8VNxu5Dx60noTyL0kp_0-B1a_s2oZ7ZuJfSsAm6Xyfo45LVtG3zgzEt-tmWHydutd3nFaVciDJIjFrZZt0OxmoXkMuuz7wbY2pUFk3vnrYa7Ww",
+    "rarity": "Industrial Grade",
+    "color": "#5e98d9"
+  },
+  {
+    "name": "FAMAS | Vendetta",
+    "weapon": "FAMAS",
+    "image": "https://community.akamai.steamstatic.com/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGIGz3UqlXOLrxM-vMGmW8VNxu5Dx60noTyL3n5vh7h1I4PeRarNSIvySHXOvzedxuPUnSS-3wEx362jWw9eodnLGaFMhCZUlQO5etBe_k9XlNuvkslDcg91FxDK-0H3uRMe02w",
+    "rarity": "Industrial Grade",
+    "color": "#5e98d9"
+  },
+  {
+    "name": "Five-SeveN | Withered Vine",
+    "weapon": "Five-SeveN",
+    "image": "https://community.akamai.steamstatic.com/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGIGz3UqlXOLrxM-vMGmW8VNxu5Dx60noTyL3l4Dl7idN6vyRe7RSLf-BAViExPZiue1scDmmhw0rtgKcn4P1Ljz4Ml93UtZuReJcshe5m9HuYunhsQ3dgowWnCqviSgduC1q5OgGBKN0r6Le2gnHZKp9v8fcyxvZMw",
+    "rarity": "Industrial Grade",
+    "color": "#5e98d9"
+  },
+  {
+    "name": "Galil AR | Cold Fusion",
+    "weapon": "Galil AR",
+    "image": "https://community.akamai.steamstatic.com/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGIGz3UqlXOLrxM-vMGmW8VNxu5Dx60noTyL2n5rp8SNJ0Pq3V6p4I_yWD3Wv0uVjvO16cCiigBwYvzSCkpu3cy6UbQIgC5QkReYKsEHsmtS2Yb_itA3Y2INNyXj6jHxK7Ho_selRA71lpPOhjRfzhg",
+    "rarity": "Industrial Grade",
+    "color": "#5e98d9"
+  },
+  {
+    "name": "Galil AR | Winter Forest",
+    "weapon": "Galil AR",
+    "image": "https://community.akamai.steamstatic.com/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGIGz3UqlXOLrxM-vMGmW8VNxu5Dx60noTyL2n5rp8SNJ0Pq3V6JiMvWAGliHyOBitfNWQyC0nQlp4m7Wy96geHvCPVQjA5d2ROYDtRC4lIGzYeLrtADejt0TzC6tj3tO7DErvbiqpszlmA",
+    "rarity": "Industrial Grade",
+    "color": "#5e98d9"
+  },
+  {
+    "name": "Glock-18 | Red Tire",
+    "weapon": "Glock-18",
+    "image": "https://community.akamai.steamstatic.com/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGIGz3UqlXOLrxM-vMGmW8VNxu5Dx60noTyL2kpnj9h1I_826YbZoH-SBC2aU_vxztN5lRi67gVN15WzSmY36cn6RagEnD8MjTbIJ50W5m9OyN-rmtQGIgo9Fnimrhngd8G81tCm_mA6x",
+    "rarity": "Industrial Grade",
+    "color": "#5e98d9"
+  },
+  {
+    "name": "M4A1-S | Boreal Forest",
+    "weapon": "M4A1-S",
+    "image": "https://community.akamai.steamstatic.com/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGIGz3UqlXOLrxM-vMGmW8VNxu5Dx60noTyL8ypexwjFS4_ega6F_H_iKMWGf0-tlpN5rQDu2lBEYvzSCkpu3dyqVZgF1CJAhF7NYtULrlIa2M-Lh4wKMiYlDmyqrhygduCZs6-xXV71lpPMY7TF_eA",
+    "rarity": "Industrial Grade",
+    "color": "#5e98d9"
+  },
+  {
+    "name": "M4A4 | Desert Storm",
+    "weapon": "M4A4",
+    "image": "https://community.akamai.steamstatic.com/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGIGz3UqlXOLrxM-vMGmW8VNxu5Dx60noTyL8ypexwipC0Pare6F_NM-fB2CY1aB347UxFi-3kEgi5TmAw93_dXKWPFR1CJchTOQDsxa6m4DkM--0sgfZlcsbmn2FVX37",
+    "rarity": "Industrial Grade",
+    "color": "#5e98d9"
+  },
+  {
+    "name": "M4A4 | Urban DDPAT",
+    "weapon": "M4A4",
+    "image": "https://community.akamai.steamstatic.com/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGIGz3UqlXOLrxM-vMGmW8VNxu5Dx60noTyL8ypexwipC0PaqeKV5H-WBDFicyOl-pK8xF3DjzR5_4zncnouhcSjGPQ8jA5B3ELFbuhPqloDkPrvjsgXY2t5N02yg2Rf5X8A9",
+    "rarity": "Industrial Grade",
+    "color": "#5e98d9"
+  },
+  {
+    "name": "MAC-10 | Silver",
+    "weapon": "MAC-10",
+    "image": "https://community.akamai.steamstatic.com/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGIGz3UqlXOLrxM-vMGmW8VNxu5Dx60noTyL8n5WxrR1a4c29Yah7JeKsAm6Xyfo44-UwS32xwkUjsGzSwtqoJCjCOABxD8AkFu5bsha7wdGyM-rn4wzWjpUFk3tFRcHXeg",
+    "rarity": "Industrial Grade",
+    "color": "#5e98d9"
+  },
+  {
+    "name": "MAG-7 | Wildwood",
+    "weapon": "MAG-7",
+    "image": "https://community.akamai.steamstatic.com/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGIGz3UqlXOLrxM-vMGmW8VNxu5Dx60noTyL8n5G3wjFU7PqRf61hJOecAWOvzO9x595lRi67gVN36mzTw9v8cnyRaAZ1XMB2E7MPtkS-lYK2YuOx7gTd3dlDziSqjixB8G81tBJWeXuA",
+    "rarity": "Industrial Grade",
+    "color": "#5e98d9"
+  },
+  {
+    "name": "MP7 | Coral Paisley",
+    "weapon": "MP7",
+    "image": "https://community.akamai.steamstatic.com/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGIGz3UqlXOLrxM-vMGmW8VNxu5Dx60noTyL8jsHf9Tte0OKvYbdhJemsGWaCzNF6ueZhW2fklEV-sGvUzdigdX2WbgciCZQjRe9b50Xqm4bkMevj5gaMgo1AnCiskGoXuQsY-r8v",
+    "rarity": "Industrial Grade",
+    "color": "#5e98d9"
+  },
+  {
+    "name": "MP9 | Old Roots",
+    "weapon": "MP9",
+    "image": "https://community.akamai.steamstatic.com/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGIGz3UqlXOLrxM-vMGmW8VNxu5Dx60noTyL8js_f7jJk4v28Z5tuIeKFB2mX_vdzvO1mWBa_nBovp3PUmI6vdi-VOgInDpFxQOIKuhW8lNC1Puqw41fajIJCnCv9j3tIuixt_a9cBudlkiY3",
+    "rarity": "Industrial Grade",
+    "color": "#5e98d9"
+  },
+  {
+    "name": "Negev | Sour Grapes",
+    "weapon": "Negev",
+    "image": "https://community.akamai.steamstatic.com/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGIGz3UqlXOLrxM-vMGmW8VNxu5Dx60noTyL_m5Hl6x1I4PeRaqF_MumsAm6Xyfo44-Q7Gy3jzBsh4Tncw4n6cXiRbFAlW5B3TbEJu0PuwNWzPu_r4wDagpUFk3tgr-gSOQ",
+    "rarity": "Industrial Grade",
+    "color": "#5e98d9"
+  },
+  {
+    "name": "Nova | Turquoise Pour",
+    "weapon": "Nova",
+    "image": "https://community.akamai.steamstatic.com/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGIGz3UqlXOLrxM-vMGmW8VNxu5Dx60noTyL_kYDhwjFU4M2va7Z0LPmQMWGczvlJpPR7Xjy8nA4ijDGMnYftb3-fZwAiDJtyF-cItxO_lNbnY7_h5QHXiIMQxCj3ingf6nw66uYKBfE7uvqA67y3_Ew",
+    "rarity": "Industrial Grade",
+    "color": "#5e98d9"
+  },
+  {
+    "name": "P2000 | Marsh",
+    "weapon": "P2000",
+    "image": "https://community.akamai.steamstatic.com/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGIGz3UqlXOLrxM-vMGmW8VNxu5Dx60noTyL5lYayrXIL0OGhbZt5JfGfMWCcyPpitfNWQyC0nQlpsWvXy9-rdSiePQEkWZt0QuEI5kXsldXjMe3k5Qfag91CzyX-hyNL6zErvbj1scXf1A",
+    "rarity": "Industrial Grade",
+    "color": "#5e98d9"
+  },
+  {
+    "name": "P250 | Facets",
+    "weapon": "P250",
+    "image": "https://community.akamai.steamstatic.com/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGIGz3UqlXOLrxM-vMGmW8VNxu5Dx60noTyLhzMOwwipC0PG8fal9LPWsCmaCytF0ouB_QBa_nBovp3ODy9z8c3KQOg5zDJR3Te5e4RXpxoLuMbjl7wDdioJAzn_2jShJ6y9i_a9cBseVOER4",
+    "rarity": "Industrial Grade",
+    "color": "#5e98d9"
+  },
+  {
+    "name": "P90 | Leather",
+    "weapon": "P90",
+    "image": "https://community.akamai.steamstatic.com/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGIGz3UqlXOLrxM-vMGmW8VNxu5Dx60noTyLhx8bf_jdk7eChf6pSLPWSGm-V09Fm6bFWQyC0nQlp5z-HmYr_cH2XaVJ1DcRwEbFYsES5xtK0NOux7waMgoMTzyyrinlO7DErvbjoM7X31Q",
+    "rarity": "Industrial Grade",
+    "color": "#5e98d9"
+  },
+  {
+    "name": "PP-Bizon | Breaker Box",
+    "weapon": "PP-Bizon",
+    "image": "https://community.akamai.steamstatic.com/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGIGz3UqlXOLrxM-vMGmW8VNxu5Dx60noTyLzl4zv8x1a7s25YbZkLvesAm6Xyfo45-c-SXvhzUl352rSm9eqdS3DPQBxCJMjQuBYtRDsmtDmM77i51HcjpUFk3uv8knCxA",
+    "rarity": "Industrial Grade",
+    "color": "#5e98d9"
+  },
+  {
+    "name": "R8 Revolver | Leafhopper",
+    "weapon": "R8 Revolver",
+    "image": "https://community.akamai.steamstatic.com/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGIGz3UqlXOLrxM-vMGmW8VNxu5Dx60noTyLjm4Dv8TRe_c2veZt5KeSSAG6FzNF3s-htcCW6khUz_W-Gy96pJXmWOwJyX8QlF7Zeshm5wYbiMOvm5laLjohNxCis3S8a5311o7FVOU-zWog",
+    "rarity": "Industrial Grade",
+    "color": "#5e98d9"
+  },
+  {
+    "name": "SG 553 | Candy Apple",
+    "weapon": "SG 553",
+    "image": "https://community.akamai.steamstatic.com/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGIGz3UqlXOLrxM-vMGmW8VNxu5Dx60noTyLimcO1qx1I4M28baBSM_fGWzSvzedxuPUnF3vgx0kmtznSyoyreSqea1UoD5Z0RrZetBm-lt3nPu_r5waP2d9FnDK-0H3tyRypkA",
+    "rarity": "Industrial Grade",
+    "color": "#5e98d9"
+  },
+  {
+    "name": "SSG 08 | Halftone Whorl",
+    "weapon": "SSG 08",
+    "image": "https://community.akamai.steamstatic.com/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGIGz3UqlXOLrxM-vMGmW8VNxu5Dx60noTyLijZGwpR1T-829f61_LM-AHWDAmdF6ueZhW2e1lxxwsW3SnN-gIC6ea1cgDZdwQ7Fft0G5xoK2NOq241bfj9lCxX2tkGoXuc4PJZth",
+    "rarity": "Industrial Grade",
+    "color": "#5e98d9"
+  },
+  {
+    "name": "Sawed-Off | Snake Camo",
+    "weapon": "Sawed-Off",
+    "image": "https://community.akamai.steamstatic.com/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGIGz3UqlXOLrxM-vMGmW8VNxu5Dx60noTyLin4Hl-S1d6c29eJt-LvGYC1icyOl-pK8xHnDixkt_52zdyYqudXjBb1dyDJIlEe5e50G_xN22Yb_qs1TZiN5A02yg2XLJgstT",
+    "rarity": "Industrial Grade",
+    "color": "#5e98d9"
+  },
+  {
+    "name": "Tec-9 | Rust Leaf",
+    "weapon": "Tec-9",
+    "image": "https://community.akamai.steamstatic.com/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGIGz3UqlXOLrxM-vMGmW8VNxu5Dx60noTyLlm5W5wjFL0P6raaJSL-KSAGCV_uJ_t-l9AXnhxUxz5mXSmd2sJ3yfagAjDJp4EeReuxHqwNfnY-O0tQSPjINNz3rgznQeAmDb9hs",
+    "rarity": "Industrial Grade",
+    "color": "#5e98d9"
+  },
+  {
+    "name": "UMP-45 | Mechanism",
+    "weapon": "UMP-45",
+    "image": "https://community.akamai.steamstatic.com/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGIGz3UqlXOLrxM-vMGmW8VNxu5Dx60noTyLkk4a0qB1a7s2rZqNkLvWsHmKCx-FkveBnTCyMmRQguynLwo2reHmVbgQkApR1FrNc50KwmoazMbyw4VHeioJBziX-hiocvH1otvFCD_SLOTiQGw",
+    "rarity": "Industrial Grade",
+    "color": "#5e98d9"
+  },
+  {
+    "name": "XM1014 | Banana Leaf",
+    "weapon": "XM1014",
+    "image": "https://community.akamai.steamstatic.com/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGIGz3UqlXOLrxM-vMGmW8VNxu5Dx60noTyLpk8ewrHZk5-uRZKFsJs-UHGKVz9F6ueZhW2e3zRlxsTvVzdqpdy6eOwF0X8ciQOcD5hjqwNLmNu7isQHfjY1Cz3mvkGoXuYSrXADo",
+    "rarity": "Industrial Grade",
+    "color": "#5e98d9"
+  },
+  {
+    "name": "AK-47 | Black Laminate",
+    "weapon": "AK-47",
+    "image": "https://community.akamai.steamstatic.com/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGIGz3UqlXOLrxM-vMGmW8VNxu5Dx60noTyLwlcK3wipC0POlPPNhIf2sDHCvzedxuPUnGnzjlh51sTyAzomrICnEbQByWcciTOQIsBG_m9LiZOLh7wfdi91DnzK-0H1Z7oynag",
+    "rarity": "Mil-Spec Grade",
+    "color": "#4b69ff"
+  },
+  {
+    "name": "AUG | Carved Jade",
+    "weapon": "AUG",
+    "image": "https://community.akamai.steamstatic.com/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGIGz3UqlXOLrxM-vMGmW8VNxu5Dx60noTyLwi5Hf_C9k5fOqbZthKfebGimWkLlytrI5TXrlwBx-sGyGw9-gcC-fZgAhCpRwQbRbtxe4kdSxP7vm-UWA3MgZU-ku",
+    "rarity": "Mil-Spec Grade",
+    "color": "#4b69ff"
+  },
+  {
+    "name": "AWP | Acheron",
+    "weapon": "AWP",
+    "image": "https://community.akamai.steamstatic.com/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGIGz3UqlXOLrxM-vMGmW8VNxu5Dx60noTyLwiYbf9Ttk4eetZKFsMs-ABXKczf1JouRtTSWmkCIrujqNjsH4eC-ROFMkDccjR7EDsBCxlN2xZu7jtlaNj4pMxSr8hiIc53tt67kHT-N7rafi4HxI",
+    "rarity": "Mil-Spec Grade",
+    "color": "#4b69ff"
+  },
+  {
+    "name": "CZ75-Auto | Imprint",
+    "weapon": "CZ75-Auto",
+    "image": "https://community.akamai.steamstatic.com/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGIGz3UqlXOLrxM-vMGmW8VNxu5Dx60noTyLyhMG1_B1c_M2tcvM4H-SBC2aU_uJ_t-l9AX_ql0kksWTVyYupJC7FOAUiAptxQudbs0KxkNK1MLzl4wOPjIsWyCngznQeZTDWXeo",
+    "rarity": "Mil-Spec Grade",
+    "color": "#4b69ff"
+  },
+  {
+    "name": "Desert Eagle | Meteorite",
+    "weapon": "Desert Eagle",
+    "image": "https://community.akamai.steamstatic.com/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGIGz3UqlXOLrxM-vMGmW8VNxu5Dx60noTyL1m5fn8Sdk7v-Ra7Z0M-SSAmuZ2-tyj-VoXSKMmRQguynLyN-qIH3Daw4mCZR3EeBbsUO-l4a2Prvm7gzWg4MXnymq2H8Yui9usfFCD_RyA7Mmlw",
+    "rarity": "Mil-Spec Grade",
+    "color": "#4b69ff"
+  },
+  {
+    "name": "Dual Berettas | Dualing Dragons",
+    "weapon": "Dual Berettas",
+    "image": "https://community.akamai.steamstatic.com/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGIGz3UqlXOLrxM-vMGmW8VNxu5Dx60noTyL0kp_0-B1Y-s2qfaVhIvWBHGKE1e9JtPNoSCa9hiIrujqNjsGqcn-VZ1JyXMR3RuMK5xDswNXkYbjitgePj91Bynn32y5N7ydtsLoET-N7rXzpOmeh",
+    "rarity": "Mil-Spec Grade",
+    "color": "#4b69ff"
+  },
+  {
+    "name": "FAMAS | Dark Water",
+    "weapon": "FAMAS",
+    "image": "https://community.akamai.steamstatic.com/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGIGz3UqlXOLrxM-vMGmW8VNxu5Dx60noTyL3n5vh7h1a4s20baZ_Ic-XD3Wb_uJ_t-l9ASywkUsmsjzdmdiqIiqXaQ4oDJF0RuNZukO-ltflNu_mslffg9gTnC3gznQeYZiQwTg",
+    "rarity": "Mil-Spec Grade",
+    "color": "#4b69ff"
+  },
+  {
+    "name": "Five-SeveN | Crimson Blossom",
+    "weapon": "Five-SeveN",
+    "image": "https://community.akamai.steamstatic.com/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGIGz3UqlXOLrxM-vMGmW8VNxu5Dx60noTyL3l4Dl7idN6vyRYL1SIuWXMXWVxdF6ueZhW2ewkE5162rRnNerIy6WagApDptyRuVZshbql9DuMOPj71CI2YoRzyqokGoXufqVyZvA",
+    "rarity": "Mil-Spec Grade",
+    "color": "#4b69ff"
+  },
+  {
+    "name": "Five-SeveN | Violent Daimyo",
+    "weapon": "Five-SeveN",
+    "image": "https://community.akamai.steamstatic.com/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGIGz3UqlXOLrxM-vMGmW8VNxu5Dx60noTyL3l4Dl7idN6vyRa7FSJvmFC1iDxPhzvt5tTiC-jBIYvzSCkpu3cXjCPAB2WZMmQ-EK4BTqlNSzNOLk71GI3tpGmX2oii5N6nk667kDWL1lpPNv4wCTtw",
+    "rarity": "Mil-Spec Grade",
+    "color": "#4b69ff"
+  },
+  {
+    "name": "G3SG1 | Violet Murano",
+    "weapon": "G3SG1",
+    "image": "https://community.akamai.steamstatic.com/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGIGz3UqlXOLrxM-vMGmW8VNxu5Dx60noTyL2zYXnrB1a4s2jfbZsLv-sGG6fzetij-1gSCGn2050tmuDn9v8JXmXPwclD5txROII40G-l9S1Mb-04lGIit5Mm3qt2HtXrnE8WK3_Jks",
+    "rarity": "Mil-Spec Grade",
+    "color": "#4b69ff"
+  },
+  {
+    "name": "Galil AR | Sandstorm",
+    "weapon": "Galil AR",
+    "image": "https://community.akamai.steamstatic.com/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGIGz3UqlXOLrxM-vMGmW8VNxu5Dx60noTyL2n5rp8SNJ0PG7V7dsLvSAGmiCzNF6ueZhW2exkx4m6mrcmd6heS-XZgB1ApZ3FLUI5xm6ktezMuzh7gTeiYpFnCr-kGoXuTw2UKiI",
+    "rarity": "Mil-Spec Grade",
+    "color": "#4b69ff"
+  },
+  {
+    "name": "Glock-18 | Green Line",
+    "weapon": "Glock-18",
+    "image": "https://community.akamai.steamstatic.com/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGIGz3UqlXOLrxM-vMGmW8VNxu5Dx60noTyL2kpnj9h1c4_2tY5t5MvGaAFiX0-tzvt5lRi67gVNw5TjSy4mseXqXagEpW8FyQu5cu0Hpw4ayNLjntFeNgoJEnyWqjCNN8G81tF3dwatE",
+    "rarity": "Mil-Spec Grade",
+    "color": "#4b69ff"
+  },
+  {
+    "name": "M249 | Deep Relief",
+    "weapon": "M249",
+    "image": "https://community.akamai.steamstatic.com/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGIGz3UqlXOLrxM-vMGmW8VNxu5Dx60noTyL8zMK5wiFO0P_8PP1SJPWWHliCxOJ_tedWQyC0nQlp5DzUzIyqcnyQOAckWJckQu8KuhnpkdPgNu-0tgTYio5Eny2shnsd7TErvbi9QVp9bQ",
+    "rarity": "Mil-Spec Grade",
+    "color": "#4b69ff"
+  },
+  {
+    "name": "M4A1-S | Rose Hex",
+    "weapon": "M4A1-S",
+    "image": "https://community.akamai.steamstatic.com/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGIGz3UqlXOLrxM-vMGmW8VNxu5Dx60noTyL8ypexwjFS4_ega6F_H_iKMW-V2e9xv-9WQyC0nQlp6mzTyNr8eH3EOAAmXMQjEOdZtxC7mt3gMuuw5FSL3YlNn3qv3CxO5jErvbgiwdR6KA",
+    "rarity": "Mil-Spec Grade",
+    "color": "#4b69ff"
+  },
+  {
+    "name": "MAC-10 | Amber Fade",
+    "weapon": "MAC-10",
+    "image": "https://community.akamai.steamstatic.com/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGIGz3UqlXOLrxM-vMGmW8VNxu5Dx60noTyL8n5WxrR1a7s2oaaBoH_2WGmaczed1j-1gSCGn20QlsWqAz4z8d3yfP1IpW8QkQeIN5hXtldTkMuqzsQyNjNgUxX6vjCpXrnE8FVzqUc8",
+    "rarity": "Mil-Spec Grade",
+    "color": "#4b69ff"
+  },
+  {
+    "name": "MAC-10 | Pipsqueak",
+    "weapon": "MAC-10",
+    "image": "https://community.akamai.steamstatic.com/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGIGz3UqlXOLrxM-vMGmW8VNxu5Dx60noTyL8n5WxrR1Y-s2hfqF_MPGAHViD0PtzsepWQiiwxE0YvzSCkpu3eXiQOlMkDpAhEeELuhi8x9DmM-uw4VCL2YlAzSn223tL7idp67wDUL1lpPNy-DeiVw",
+    "rarity": "Mil-Spec Grade",
+    "color": "#4b69ff"
+  },
+  {
+    "name": "MAG-7 | Hazard",
+    "weapon": "MAG-7",
+    "image": "https://community.akamai.steamstatic.com/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGIGz3UqlXOLrxM-vMGmW8VNxu5Dx60noTyL8n5G3wjFL0PqvcqV_JM-RHGaGztF6ueZhW2flxR8ksDvcnt_7JC7DaQUgA5FxQe8I50TsmobhMe2041SI2dpFySWrkGoXuaG6AS0C",
+    "rarity": "Mil-Spec Grade",
+    "color": "#4b69ff"
+  },
+  {
+    "name": "MP5-SD | Desert Strike",
+    "weapon": "MP5-SD",
+    "image": "https://community.akamai.steamstatic.com/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGIGz3UqlXOLrxM-vMGmW8VNxu5Dx60noTyL8jsPz-R1Y-s2jePFSJPWAC3WE_v1iouhiSha_nBovp3PUzYyqdHKfOgJ1CpAhROQJukW4lYDuMr7jswfWjdpNyimsi35O53s-_a9cBg0oJUav",
+    "rarity": "Mil-Spec Grade",
+    "color": "#4b69ff"
+  },
+  {
+    "name": "MP7 | Guerrilla",
+    "weapon": "MP7",
+    "image": "https://community.akamai.steamstatic.com/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGIGz3UqlXOLrxM-vMGmW8VNxu5Dx60noTyL8jsHf_jdk4uL5V69lIfuaMWuZxuZi_uU7Hy22xE5x5TnWyYqvIi2SaVN0C8d1QeVf4RC-kdC0MOPl4Qbf2dhbjXKpOJ4z2JA",
+    "rarity": "Mil-Spec Grade",
+    "color": "#4b69ff"
+  },
+  {
+    "name": "MP9 | Dark Age",
+    "weapon": "MP9",
+    "image": "https://community.akamai.steamstatic.com/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGIGz3UqlXOLrxM-vMGmW8VNxu5Dx60noTyL8js_f_C9k4ve6aahSKf6fD36vzedxuPUnG3uwxxkk6jnWmdqsJy-UbFV0DZV4FLRctUXqwIWyNb_r5Qbdg4lGzzK-0H2q-xqNvQ",
+    "rarity": "Mil-Spec Grade",
+    "color": "#4b69ff"
+  },
+  {
+    "name": "MP9 | Shredded",
+    "weapon": "MP9",
+    "image": "https://community.akamai.steamstatic.com/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGIGz3UqlXOLrxM-vMGmW8VNxu5Dx60noTyL8js_f9Tte0OKnZq9SNPmUC3WvzedxuPUnGCiyxB4ksDzdz4qpeS-UZ1clXsBwTOFc5BO_kdPlNOnl5wOL2IJGyzK-0H3-TFWDqQ",
+    "rarity": "Mil-Spec Grade",
+    "color": "#4b69ff"
+  },
+  {
+    "name": "Negev | Terrain",
+    "weapon": "Negev",
+    "image": "https://community.akamai.steamstatic.com/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGIGz3UqlXOLrxM-vMGmW8VNxu5Dx60noTyL_m5Hl6x1I_82gbaNoNs-HG3WB_vpzovNoRieMmRQguynLz4qgJyqWOg8iDZFyFOcD40axlYflNL7htgDb2thNmH6oinkc5yZt4fFCD_QbgNa1nA",
+    "rarity": "Mil-Spec Grade",
+    "color": "#4b69ff"
+  },
+  {
+    "name": "Nova | Tempest",
+    "weapon": "Nova",
+    "image": "https://community.akamai.steamstatic.com/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGIGz3UqlXOLrxM-vMGmW8VNxu5Dx60noTyL_kYDhwipC0OGrabdkJPWsDHWR1-FJvOhuRz39xUUk4jiHyt_9cXzGZwV2CJJyQbYN4Ua9wdPiZr6x4FTcjIhMzXmsjjQJsHjYOlWGdQ",
+    "rarity": "Mil-Spec Grade",
+    "color": "#4b69ff"
+  },
+  {
+    "name": "P2000 | Lifted Spirits",
+    "weapon": "P2000",
+    "image": "https://community.akamai.steamstatic.com/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGIGz3UqlXOLrxM-vMGmW8VNxu5Dx60noTyL5lYayrXIL0PG7V7Q_K8-VAn6Zz-lJtPNsTiSMmRQguynLydatcHrEOgIhXJZxReINtRO7ltexZuiwtQPd34lFxXqqjisYun444fFCD_R1ajI6RQ",
+    "rarity": "Mil-Spec Grade",
+    "color": "#4b69ff"
+  },
+  {
+    "name": "P250 | Black & Tan",
+    "weapon": "P250",
+    "image": "https://community.akamai.steamstatic.com/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGIGz3UqlXOLrxM-vMGmW8VNxu5Dx60noTyLhzMOwwipC0Pare6F_NM-eG2uEyO13vd5lRi67gVMm5GrTyN-ueH6fO1MlDMd2RLQC50Trw4fvMuPns1eLj9hHzCn4j3lK8G81tJittFNq",
+    "rarity": "Mil-Spec Grade",
+    "color": "#4b69ff"
+  },
+  {
+    "name": "P250 | Small Game",
+    "weapon": "P250",
+    "image": "https://community.akamai.steamstatic.com/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGIGz3UqlXOLrxM-vMGmW8VNxu5Dx60noTyLhzMOwwjFU7PqRYLFjNPWBMWWcwPRzj_E7GnmMmRQguynLzdv4JCrGalRzCpZzQLUD5BG5wdPkZuqx51OLjt4Uyiv52CJL6ipssfFCD_QcHDx_gA",
+    "rarity": "Mil-Spec Grade",
+    "color": "#4b69ff"
+  },
+  {
+    "name": "P90 | Freight",
+    "weapon": "P90",
+    "image": "https://community.akamai.steamstatic.com/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGIGz3UqlXOLrxM-vMGmW8VNxu5Dx60noTyLhx8bf-jFk_6v-V6diLuSSB2mV09F6ueZhW2fhk09ytjmDm4n8JHOebQEgCMAmQrEMuhi4k4W0MurntVHfid5GnC38kGoXuRB1lB54",
+    "rarity": "Mil-Spec Grade",
+    "color": "#4b69ff"
+  },
+  {
+    "name": "PP-Bizon | Cobalt Halftone",
+    "weapon": "PP-Bizon",
+    "image": "https://community.akamai.steamstatic.com/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGIGz3UqlXOLrxM-vMGmW8VNxu5Dx60noTyLzl4zv8x1a4s26fbZ8L_mAC1iYwOJwpO5nSha_nBovp3PTnN79IH-fZw5xW5V4RrJYtRHpmtzkM-K04laIidlDz376jHhB5ixj_a9cBqXoycG_",
+    "rarity": "Mil-Spec Grade",
+    "color": "#4b69ff"
+  },
+  {
+    "name": "R8 Revolver | Blaze",
+    "weapon": "R8 Revolver",
+    "image": "https://community.akamai.steamstatic.com/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGIGz3UqlXOLrxM-vMGmW8VNxu5Dx60noTyLjm4Dv8TRe_c2vaZtrLPGeC3SvzedxuPUnTCznkR9xsGiHzomgIn-UPwN1DZZyELNe5xDrlNTgY-jm5FeM3tkUnDK-0H3jUXrCJQ",
+    "rarity": "Mil-Spec Grade",
+    "color": "#4b69ff"
+  },
+  {
+    "name": "SCAR-20 | Caged",
+    "weapon": "SCAR-20",
+    "image": "https://community.akamai.steamstatic.com/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGIGz3UqlXOLrxM-vMGmW8VNxu5Dx60noTyLinZfyr3Jk_PGvept_JfaBD2SEyOF4j_c9cCW6khUz_W_SmNirdSmVOFcmDJEjQrEPtROwxtGyYevqsgPcg98RxXishi1Bui91o7FVKL5cNSg",
+    "rarity": "Mil-Spec Grade",
+    "color": "#4b69ff"
+  },
+  {
+    "name": "SCAR-20 | Wild Berry",
+    "weapon": "SCAR-20",
+    "image": "https://community.akamai.steamstatic.com/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGIGz3UqlXOLrxM-vMGmW8VNxu5Dx60noTyLinZfyr3Jk7OeRa6xoNuKcAFiDwu9k4rFWQyC0nQlpsmnTyNf8dy-fZlIoDZd1F7MI4xbuw4e0NLm0sgaP3tpNn37_h3gf6jErvbhxX_RFLw",
+    "rarity": "Mil-Spec Grade",
+    "color": "#4b69ff"
+  },
+  {
+    "name": "SG 553 | Ol' Rusty",
+    "weapon": "SG 553",
+    "image": "https://community.akamai.steamstatic.com/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGIGz3UqlXOLrxM-vMGmW8VNxu5Dx60noTyLimcO1qx1c_M29b_E4c8-BG3SE2NF6ueZhW2e3xxt35GzSw9_8J3yePFIpCMEiRrJZukO7x4exZLiw4AGLiNgRy32rkGoXuZqsEgp2",
+    "rarity": "Mil-Spec Grade",
+    "color": "#4b69ff"
+  },
+  {
+    "name": "SSG 08 | Memorial",
+    "weapon": "SSG 08",
+    "image": "https://community.akamai.steamstatic.com/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGIGz3UqlXOLrxM-vMGmW8VNxu5Dx60noTyLijZGwpR1I_PX-MJtvMuWHD2uZ0vpJvOhuRz39x0UlsWmEnt37IHyfaFAkWZR5RuALtRKxlYKxMLnn4leL3t5FmSv9ijQJsHj6GwByAQ",
+    "rarity": "Mil-Spec Grade",
+    "color": "#4b69ff"
+  },
+  {
+    "name": "Sawed-Off | First Class",
+    "weapon": "Sawed-Off",
+    "image": "https://community.akamai.steamstatic.com/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGIGz3UqlXOLrxM-vMGmW8VNxu5Dx60noTyLin4Hl-S1d6c2tfZtqMvWWAFicxO9iuOR7cDqyghgjvDuDpYPwJiPTcA9yXpB0QOQPsEW_l9DlY-3m4gaK3YtDyS_7jCpB7S9vtuwDUfck8qHJz1aWiwWPy5U",
+    "rarity": "Mil-Spec Grade",
+    "color": "#4b69ff"
+  },
+  {
+    "name": "Tec-9 | Brass",
+    "weapon": "Tec-9",
+    "image": "https://community.akamai.steamstatic.com/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGIGz3UqlXOLrxM-vMGmW8VNxu5Dx60noTyLlm5W5wiNK0PC8abd-H_yaCW-Ej-91tuQ7Sy3gzB9x4m_Vy9b8dy-SaFcjDZchQ-IL5EHqxtzhP7y34ADAy9USp8n4eRk",
+    "rarity": "Mil-Spec Grade",
+    "color": "#4b69ff"
+  },
+  {
+    "name": "Tec-9 | Safety Net",
+    "weapon": "Tec-9",
+    "image": "https://community.akamai.steamstatic.com/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGIGz3UqlXOLrxM-vMGmW8VNxu5Dx60noTyLlm5W5wipC0P-re6xSM_GVC3OJzvx3vuZscCW6khUz_WnSyIytcXPBPw8oDpMkQeIPuxjtxoWyYuOztVTX3okXyy3_2y9N6Xp1o7FVepitb8I",
+    "rarity": "Mil-Spec Grade",
+    "color": "#4b69ff"
+  },
+  {
+    "name": "UMP-45 | Delusion",
+    "weapon": "UMP-45",
+    "image": "https://community.akamai.steamstatic.com/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGIGz3UqlXOLrxM-vMGmW8VNxu5Dx60noTyLkk4a0qB1I_827ZbQ5dc-XQ3GZ0ud5vvJWQyC0nQlp5z7RwtyrIC6WbAYgCJp3Q-YD4RXsxN3jN-7n41He390QzXn5iCMf5jErvbiLTzB_rQ",
+    "rarity": "Mil-Spec Grade",
+    "color": "#4b69ff"
+  },
+  {
+    "name": "UMP-45 | Warm Blooded",
+    "weapon": "UMP-45",
+    "image": "https://community.akamai.steamstatic.com/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGIGz3UqlXOLrxM-vMGmW8VNxu5Dx60noTyLkk4a0qB1T9veRfKF-NM-SAG6dwOJJoPNgQT2MwUgYvzSCkpu3dnuUalN2X5IjRe5fsUa9xoeyN-rr7waMiINDnC7_jnlI6ixq5OpWWb1lpPMCclDonA",
+    "rarity": "Mil-Spec Grade",
+    "color": "#4b69ff"
+  },
+  {
+    "name": "USP-S | Purple DDPAT",
+    "weapon": "USP-S",
+    "image": "https://community.akamai.steamstatic.com/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGIGz3UqlXOLrxM-vMGmW8VNxu5Dx60noTyLkjYbf7itX6vytbbZSIf2sCmOAwPpJoPR7XyW2qhEutDWR1N-rcHPBPFMiDZUkF-9Z4ETtxtDkYu3js1ffg94Tnn2o3yMavH0957ocEf1yWMwziKM",
+    "rarity": "Mil-Spec Grade",
+    "color": "#4b69ff"
+  },
+  {
+    "name": "XM1014 | Mockingbird",
+    "weapon": "XM1014",
+    "image": "https://community.akamai.steamstatic.com/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGIGz3UqlXOLrxM-vMGmW8VNxu5Dx60noTyLpk8ewrHZk9___OPU5H_2cDWyZz-l0ufNtcCW6khUz_T-AnNagJH3FbwQnCsEmTeEMs0aww9biMby3tleKjtkQmSX-2yMfv311o7FVNa3OfdQ",
+    "rarity": "Mil-Spec Grade",
+    "color": "#4b69ff"
+  },
+  {
+    "name": "AK-47 | Blue Laminate",
+    "weapon": "AK-47",
+    "image": "https://community.akamai.steamstatic.com/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGIGz3UqlXOLrxM-vMGmW8VNxu5Dx60noTyLwlcK3wipC0POlPPNhIf2sDGuFxNF6ueZhW2fhzE5_5G7dnt_7JXufa1J0DZAkE-cKtBaxl9WzPuyz5lDY3YpAzCn9kGoXuZPu7T4u",
+    "rarity": "Restricted",
+    "color": "#8847ff"
+  },
+  {
+    "name": "AUG | Aristocrat",
+    "weapon": "AUG",
+    "image": "https://community.akamai.steamstatic.com/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGIGz3UqlXOLrxM-vMGmW8VNxu5Dx60noTyLwi5Hf-jFk7uepV6V_KeOHAWSCwPpJvOhuRz39w00j5WSDytyqI3_CPwAgXMd2E-Vc4US-koCxNOzq5AaMithNyij32DQJsHjdc8VZyg",
+    "rarity": "Restricted",
+    "color": "#8847ff"
+  },
+  {
+    "name": "AWP | PAW",
+    "weapon": "AWP",
+    "image": "https://community.akamai.steamstatic.com/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGIGz3UqlXOLrxM-vMGmW8VNxu5Dx60noTyLwiYbf_C9k7uW-V7RsN-CSGVicyOl-pK84Tn-3xkgltWWGnI39c3LDaA4lD5V0QO8It0LqktfuMOrq7gDajYJG02yg2bUm5WIV",
+    "rarity": "Restricted",
+    "color": "#8847ff"
+  },
+  {
+    "name": "CZ75-Auto | Slalom",
+    "weapon": "CZ75-Auto",
+    "image": "https://community.akamai.steamstatic.com/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGIGz3UqlXOLrxM-vMGmW8VNxu5Dx60noTyLyhMG1_B1Y-s2vard5MvGQGliHyeditd5qVRa_nBovp3Pdzt3_eSqUOA4hDpB1EbQPshXqkdPmPrm04APXjdhExXis2C1N7io9_a9cBtMaUZjs",
+    "rarity": "Restricted",
+    "color": "#8847ff"
+  },
+  {
+    "name": "Desert Eagle | Hand Cannon",
+    "weapon": "Desert Eagle",
+    "image": "https://community.akamai.steamstatic.com/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGIGz3UqlXOLrxM-vMGmW8VNxu5Dx60noTyL1m5fn8Sdk7uORYKVjJPOSAGmfz9F6ueZhW2eww0t-6mrUn977cinDZ1IgD8YiTeUIthjpk9zkYem04wTXj4oRnCv7kGoXuTIzWSlA",
+    "rarity": "Restricted",
+    "color": "#8847ff"
+  },
+  {
+    "name": "Dual Berettas | Angel Eyes",
+    "weapon": "Dual Berettas",
+    "image": "https://community.akamai.steamstatic.com/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGIGz3UqlXOLrxM-vMGmW8VNxu5Dx60noTyL0kp_0-B1f-vOiV6FhKeSWMWWZw-J_s-BlcCi9khgrjDGMnYftb32WZlN1W8B5R7UN50brwYDlPrm3s1CPjYoXmCn3hnlJuCpi574EAqA7uvqAcmHsw_M",
+    "rarity": "Restricted",
+    "color": "#8847ff"
+  },
+  {
+    "name": "Dual Berettas | Urban Shock",
+    "weapon": "Dual Berettas",
+    "image": "https://community.akamai.steamstatic.com/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGIGz3UqlXOLrxM-vMGmW8VNxu5Dx60noTyL0kp_0-B1Y-s2rZK15JeOsG3WSwOBlpO57Qha_nBovp3PQzI6pc3iRZ1cjC5dzQe4CsxPtwdHjMevq41CLjIpMm3_5jypN7Cxp_a9cBoxgoAoS",
+    "rarity": "Restricted",
+    "color": "#8847ff"
+  },
+  {
+    "name": "Five-SeveN | Boost Protocol",
+    "weapon": "Five-SeveN",
+    "image": "https://community.akamai.steamstatic.com/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGIGz3UqlXOLrxM-vMGmW8VNxu5Dx60noTyL3l4Dl7idN6vyRb7dSJvmFC1iDxPhzvt5sSTygnBIpjDGMnYftby7FalV1D5QhE-EDthW8xtCyPu63tFPciYhBynn_jykfuCttte4CA6E7uvqAn_5lxU8",
+    "rarity": "Restricted",
+    "color": "#8847ff"
+  },
+  {
+    "name": "G3SG1 | Dream Glade",
+    "weapon": "G3SG1",
+    "image": "https://community.akamai.steamstatic.com/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGIGz3UqlXOLrxM-vMGmW8VNxu5Dx60noTyL2zYXnrB1Y-s2pO7dqcc-UAmaUxNF6ueZhW2e3wkl162TVmdqvd3mUPw9yDJZ4FOYJ4UKxkNfiNrvn4QCMjdlHmHj6kGoXub9gXKkW",
+    "rarity": "Restricted",
+    "color": "#8847ff"
+  },
+  {
+    "name": "Galil AR | Galigator",
+    "weapon": "Galil AR",
+    "image": "https://community.akamai.steamstatic.com/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGIGz3UqlXOLrxM-vMGmW8VNxu5Dx60noTyL2n5rp8SNJ0PWvZK1hH_eSAm6XwPp5ot5lRi67gVN_42_VydytcX3BbQ8pCsB0ReMCtEG_lYLuNuji4AGPjt8Qynj4jXlI8G81tMQ6bFYi",
+    "rarity": "Restricted",
+    "color": "#8847ff"
+  },
+  {
+    "name": "Glock-18 | Glockingbird",
+    "weapon": "Glock-18",
+    "image": "https://community.akamai.steamstatic.com/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGIGz3UqlXOLrxM-vMGmW8VNxu5Dx60noTyL2kpnj9h1I__eRZa1-M_mfC1icyOl-pK89GCy3xUh-sW3Vntn_eHOTPw9xA5R2F-Fb4EG4k9LiNu2x7leNiY8W02yg2c2Pc93z",
+    "rarity": "Restricted",
+    "color": "#8847ff"
+  },
+  {
+    "name": "Glock-18 | Umbral Rabbit",
+    "weapon": "Glock-18",
+    "image": "https://community.akamai.steamstatic.com/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGIGz3UqlXOLrxM-vMGmW8VNxu5Dx60noTyL2kpnj9h1Y-s2pZKtuK8-eAWie_vx3suNgWxa_nBovp3PXyo76Ii_FPAQmDMYiTLYDthm_kdbmZry2slCLjoMQzC7_3y1J7nts_a9cBi_qumx0",
+    "rarity": "Restricted",
+    "color": "#8847ff"
+  },
+  {
+    "name": "M4A1-S | Flashback",
+    "weapon": "M4A1-S",
+    "image": "https://community.akamai.steamstatic.com/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGIGz3UqlXOLrxM-vMGmW8VNxu5Dx60noTyL8ypexwjFS4_ega6F_H_OGMWrEwL9Jtu1oXCGxlB4sjDGMnYftb3yVPQFyDMB3EbJZ5xC4kNPvMOO35AHW3d1AnC_3iHlNuytqtuYDVfI7uvqAZWXE-YM",
+    "rarity": "Restricted",
+    "color": "#8847ff"
+  },
+  {
+    "name": "M4A4 | Modern Hunter",
+    "weapon": "M4A4",
+    "image": "https://community.akamai.steamstatic.com/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGIGz3UqlXOLrxM-vMGmW8VNxu5Dx60noTyL8ypexwipC0Pq7ZrBoMs-eAWOV0-BJvOhuRz39xUh0tmyDmIusd3mTbldxCcEmRrYNsEO8k9a1Punis1OLj4pBxHn82jQJsHibcUQx2g",
+    "rarity": "Restricted",
+    "color": "#8847ff"
+  },
+  {
+    "name": "MAC-10 | Cat Fight",
+    "weapon": "MAC-10",
+    "image": "https://community.akamai.steamstatic.com/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGIGz3UqlXOLrxM-vMGmW8VNxu5Dx60noTyL8n5WxrR1W7vH_OJtmIf2aDWaE2-tJvOhuRz39l0lx42_Qz9v_cC2SagNyX8RwEbZbskHpltKzYriw4QPeioIWxXqv3DQJsHgCTO4phQ",
+    "rarity": "Restricted",
+    "color": "#8847ff"
+  },
+  {
+    "name": "MAC-10 | Saibā Oni",
+    "weapon": "MAC-10",
+    "image": "https://community.akamai.steamstatic.com/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGIGz3UqlXOLrxM-vMGmW8VNxu5Dx60noTyL8n5WxrR1W7vH_OJtiOvGYB1icyOl-pK89HXuxkRt2627Syt2udn6TZlJyW5R0QuMKsRm6lNflNO3g7lfbi49H02yg2Yk7YeQ4",
+    "rarity": "Restricted",
+    "color": "#8847ff"
+  },
+  {
+    "name": "MAG-7 | Prism Terrace",
+    "weapon": "MAG-7",
+    "image": "https://community.akamai.steamstatic.com/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGIGz3UqlXOLrxM-vMGmW8VNxu5Dx60noTyL8n5G3wipC0PWrZ6loNOKaDViD1etmo955SiihmSIrujqNjsGrcX3GbAB2AsdyQLMOsESxktPgMOKw7wOMgt4WmSv5jS1M63lpsedRT-N7rVBJ5qCN",
+    "rarity": "Restricted",
+    "color": "#8847ff"
+  },
+  {
+    "name": "MP7 | Just Smile",
+    "weapon": "MP7",
+    "image": "https://community.akamai.steamstatic.com/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGIGz3UqlXOLrxM-vMGmW8VNxu5Dx60noTyL8jsHf8DIM0Pi7e7BSM_2aAmKvzedxuPUnHXrkzU4i4z-Dno6sci3BaQApDpN4R-cCthnqx4W2MunhtgCI3d0QmzK-0H0MYFOvtA",
+    "rarity": "Restricted",
+    "color": "#8847ff"
+  },
+  {
+    "name": "MP9 | Ruby Poison Dart",
+    "weapon": "MP9",
+    "image": "https://community.akamai.steamstatic.com/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGIGz3UqlXOLrxM-vMGmW8VNxu5Dx60noTyL8js_f_C9k4uL3V6pkNOKcCWKe_uJ_t-l9AXzhkEsm527Xy9r_JynEP1IiWJZ3FOYP4xTqmtznNO-34VCKiYJExSjgznQeVzj6siQ",
+    "rarity": "Restricted",
+    "color": "#8847ff"
+  },
+  {
+    "name": "Nova | Graphite",
+    "weapon": "Nova",
+    "image": "https://community.akamai.steamstatic.com/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGIGz3UqlXOLrxM-vMGmW8VNxu5Dx60noTyL_kYDhwiNW0PG8fal9LPWsAm6Xyfo4teA5TSjnx05ztjnRz4v6dX2UZg8hW5B1EbMLtxW-k9XhMLjjslHbiZUFk3velnlINA",
+    "rarity": "Restricted",
+    "color": "#8847ff"
+  },
+  {
+    "name": "P2000 | Amber Fade",
+    "weapon": "P2000",
+    "image": "https://community.akamai.steamstatic.com/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGIGz3UqlXOLrxM-vMGmW8VNxu5Dx60noTyL5lYayrXIL0POvV6JsJPWsA2KEwOJ6ueJWQyC0nQlpsjvcmd_7dHyVZgdxAsB1QeRZ5BPqlYbmNuvr5lTW2o1Myyyt3ykY7DErvbib25P3aA",
+    "rarity": "Restricted",
+    "color": "#8847ff"
+  },
+  {
+    "name": "P250 | Nuclear Threat",
+    "weapon": "P250",
+    "image": "https://community.akamai.steamstatic.com/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGIGz3UqlXOLrxM-vMGmW8VNxu5Dx60noTyLhzMOwwjFL0Py7Y6F-NOKaHmKvxvxzte9WQyC0nQlp5mrRztyuIy3GbQF1WMN2QbFetBfulNbnPruz7lGKit4UyS6vjn9K5jErvbiRPSOzZg",
+    "rarity": "Restricted",
+    "color": "#8847ff"
+  },
+  {
+    "name": "P90 | Chopper",
+    "weapon": "P90",
+    "image": "https://community.akamai.steamstatic.com/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGIGz3UqlXOLrxM-vMGmW8VNxu5Dx60noTyLhx8bf-jFk_6v-V6J4LPysGm-CzvpivORWQyC0nQlptWTXzt-tIyrFPQMjCpImQbED5xm5kIDhZePitlbdjotBnH783H9L7jErvbjpMmMyTQ",
+    "rarity": "Restricted",
+    "color": "#8847ff"
+  },
+  {
+    "name": "PP-Bizon | Embargo",
+    "weapon": "PP-Bizon",
+    "image": "https://community.akamai.steamstatic.com/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGIGz3UqlXOLrxM-vMGmW8VNxu5Dx60noTyLzl4zv8x1Y-s2sYb5iLs-BAWaU_vl3ovNgQDuMmRQguynLnt37I3ifb1VyW8F4Te8D4UTrl4GxZru25FTZjI9GnCr5iC4YvSto4PFCD_TYHp-YNQ",
+    "rarity": "Restricted",
+    "color": "#8847ff"
+  },
+  {
+    "name": "SG 553 | Darkwing",
+    "weapon": "SG 553",
+    "image": "https://community.akamai.steamstatic.com/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGIGz3UqlXOLrxM-vMGmW8VNxu5Dx60noTyLimcO1qx1Y-s29b_E4c8-XD3Wb1ud4t95lRi67gVN24D7WmN2sdSqSalAmDpR2F-IDtxTpkYKyZrmzsQffgtgXzSmqjSNA8G81tFvCRYkS",
+    "rarity": "Restricted",
+    "color": "#8847ff"
+  },
+  {
+    "name": "SSG 08 | Parallax",
+    "weapon": "SSG 08",
+    "image": "https://community.akamai.steamstatic.com/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGIGz3UqlXOLrxM-vMGmW8VNxu5Dx60noTyLijZGwpR1Y-s29e6M9eM-QBnWfzO9iueJWQyC0nQlp5G6AnNuhJXmeOAd2CsMjQOUMuxC-moHgNOzh5VPXjogRmyn_iSNI5zErvbhpsYYNZg",
+    "rarity": "Restricted",
+    "color": "#8847ff"
+  },
+  {
+    "name": "Tec-9 | Bamboozle",
+    "weapon": "Tec-9",
+    "image": "https://community.akamai.steamstatic.com/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGIGz3UqlXOLrxM-vMGmW8VNxu5Dx60noTyLlm5W5wiFO0Oara_1SIvGeDGif_uJ_t-l9ASi2xxhzsT6Emdr6JCqTPQJyXpR4RLMI5hm_wNHjZe3r5Qzci41Dy3jgznQeOWU5G3g",
+    "rarity": "Restricted",
+    "color": "#8847ff"
+  },
+  {
+    "name": "UMP-45 | Crimson Foil",
+    "weapon": "UMP-45",
+    "image": "https://community.akamai.steamstatic.com/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGIGz3UqlXOLrxM-vMGmW8VNxu5Dx60noTyLkk4a0qB1c_PGmV7d9L-KHMXKd0bojj-1gSCGn20V2tm_Sn9irdX3EZwUkA5B1R-IL5Ebsk9O2MOni4AKIgogUmH333SlXrnE8E6oIYXY",
+    "rarity": "Restricted",
+    "color": "#8847ff"
+  },
+  {
+    "name": "USP-S | Dark Water",
+    "weapon": "USP-S",
+    "image": "https://community.akamai.steamstatic.com/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGIGz3UqlXOLrxM-vMGmW8VNxu5Dx60noTyLkjYbf7itX6vytbbZSIf2sFGKS0-9JtOB7RBa_nBovp3OHy9v8J3vFbgIhC5UmQ7UIsxm7wNDnNr_rswOMiNlGmCWoiH9Juis9_a9cBl2xnYuj",
+    "rarity": "Restricted",
+    "color": "#8847ff"
+  },
+  {
+    "name": "XM1014 | Black Tie",
+    "weapon": "XM1014",
+    "image": "https://community.akamai.steamstatic.com/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGIGz3UqlXOLrxM-vMGmW8VNxu5Dx60noTyLpk8ewrHZk7OeRcKk8cKHHMXSAxO1iovRkcCW6khUz_Wncm4v6dnuVawImXsZzTONcsRK5xofkYeywtgWKioNDxCX9in8cvy91o7FVLrGdyvk",
+    "rarity": "Restricted",
+    "color": "#8847ff"
+  }
+]
