@@ -23,7 +23,38 @@ function stableHash(s: string): number {
   return h >>> 0;
 }
 
+// Iconic skins get explicit price overrides so they sit above the random
+// ranges of their rarity. Highest-tier first.
+const PRICE_OVERRIDES: Record<string, number> = {
+  "AWP | Dragon Lore": 320000,
+  "AK-47 | Wild Lotus": 245000,
+  "M4A4 | Howl": 210000,
+  "AWP | Gungnir": 195000,
+  "AWP | Medusa": 145000,
+  "AK-47 | Fire Serpent": 95000,
+  "AK-47 | Case Hardened": 64000,
+  "AWP | Asiimov": 38000,
+  "M4A4 | Poseidon": 72000,
+  "USP-S | Kill Confirmed": 24000,
+  "★ Karambit | Doppler": 56000,
+  "★ M9 Bayonet | Slaughter": 41000,
+  "★ Butterfly Knife | Rust Coat": 33000,
+  "★ Skeleton Knife | Tiger Tooth": 47000,
+  "★ Talon Knife | Marble Fade": 52000,
+  "★ Bayonet | Scorched": 22000,
+  "★ Bowie Knife | Safari Mesh": 18500,
+  "★ Falchion Knife | Doppler": 26000,
+  "★ Flip Knife | Doppler": 31000,
+  "★ Gut Knife | Doppler": 17500,
+  "★ Huntsman Knife | Doppler": 21000,
+  "★ Kukri Knife | Scorched": 15000,
+  "★ Nomad Knife | Damascus Steel": 24000,
+  "★ Paracord Knife | Forest DDPAT": 14500,
+  "★ Survival Knife | Doppler": 19500,
+};
+
 function priceFor(skin: Skin): number {
+  if (PRICE_OVERRIDES[skin.name]) return PRICE_OVERRIDES[skin.name];
   const range = RARITY_PRICE_RANGE[skin.rarity];
   if (!range) return 50;
   const [min, max] = range;
@@ -284,9 +315,10 @@ async function main() {
         break;
       }
     }
-    const imageUrl = def.imageUrl.startsWith("https://community.akamai")
-      ? representative.skin.image
-      : def.imageUrl;
+    const imageUrl =
+      !def.imageUrl || def.imageUrl.startsWith("https://community.akamai")
+        ? representative.skin.image
+        : def.imageUrl;
 
     const created = await prisma.case.create({
       data: {

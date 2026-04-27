@@ -11,8 +11,8 @@ type Props = { inventory: InventoryEntry[] };
 const MIN = 3;
 const MAX = 10;
 const HOUSE_EDGE = 0.9;
-const MIN_FACTOR = 0.5;
-const MAX_FACTOR = 1.5;
+const MIN_FACTOR = 0.55;
+const MAX_FACTOR = 1.6;
 
 export function ContractsClient({ inventory }: Props) {
   const router = useRouter();
@@ -33,10 +33,9 @@ export function ContractsClient({ inventory }: Props) {
     [picked, inventory]
   );
   const total = pickedItems.reduce((s, i) => s + i.price, 0);
-  const avg = picked.length > 0 ? total / picked.length : 0;
-  const expected = avg > 0 ? Math.max(10, Math.round(avg * HOUSE_EDGE)) : 0;
-  const minP = expected > 0 ? Math.max(10, Math.floor(expected * MIN_FACTOR)) : 0;
-  const maxP = expected > 0 ? Math.max(minP + 10, Math.ceil(expected * MAX_FACTOR)) : 0;
+  const expected = total > 0 ? Math.max(10, Math.round(total * HOUSE_EDGE)) : 0;
+  const minP = total > 0 ? Math.max(10, Math.floor(total * MIN_FACTOR)) : 0;
+  const maxP = total > 0 ? Math.max(minP + 10, Math.ceil(total * MAX_FACTOR)) : 0;
 
   function toggle(id: string) {
     setPicked((cur) => {
@@ -103,8 +102,7 @@ export function ContractsClient({ inventory }: Props) {
         <div className="flex items-center justify-between flex-wrap gap-2 text-sm">
           <div>
             Выбрано: <span className="font-bold">{picked.length}/{MAX}</span> ·
-            Сумма: <span className="text-orange-300 font-bold">{formatCoins(total)}</span> ·
-            Средняя: <span className="text-orange-300 font-bold">{formatCoins(Math.round(avg))}</span>
+            Сдаёшь на: <span className="text-orange-300 font-bold">{formatCoins(total)}</span>
             {remainingToMin > 0 && (
               <span className="ml-3 text-orange-300/90 font-semibold">
                 Положить ещё минимум {remainingToMin}

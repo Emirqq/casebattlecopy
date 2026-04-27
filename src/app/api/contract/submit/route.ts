@@ -9,9 +9,10 @@ const Schema = z.object({
 
 const HOUSE_EDGE = 0.9;
 
-// Range factors mirror the UI hint shown to the player.
-const MIN_FACTOR = 0.5;
-const MAX_FACTOR = 1.5;
+// Range factors mirror the UI hint shown to the player. Applied to TOTAL value
+// of the deposit so a 3-skin contract worth 12k coins can return up to ~19k.
+const MIN_FACTOR = 0.55;
+const MAX_FACTOR = 1.6;
 
 export async function POST(req: Request) {
   const user = await getCurrentUser();
@@ -38,10 +39,9 @@ export async function POST(req: Request) {
   }
 
   const total = items.reduce((s, i) => s + i.item.price, 0);
-  const avg = total / items.length;
-  const baseReward = Math.max(10, Math.round(avg * HOUSE_EDGE));
-  const minP = Math.max(10, Math.floor(baseReward * MIN_FACTOR));
-  const maxP = Math.max(minP + 10, Math.ceil(baseReward * MAX_FACTOR));
+  const baseReward = Math.max(10, Math.round(total * HOUSE_EDGE));
+  const minP = Math.max(10, Math.floor(total * MIN_FACTOR));
+  const maxP = Math.max(minP + 10, Math.ceil(total * MAX_FACTOR));
 
   let pool = await prisma.item.findMany({
     where: { price: { gte: minP, lte: maxP } },
