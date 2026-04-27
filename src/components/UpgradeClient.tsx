@@ -38,6 +38,7 @@ export function UpgradeClient({ balance, inventory, allItems }: Props) {
   const [busy, setBusy] = useState(false);
   const [needle, setNeedle] = useState<number>(0); // 0 = top, clockwise positive
   const [result, setResult] = useState<null | { won: boolean; chance: number; targetName: string; targetImage: string; targetRarity: string }>(null);
+  const [revealed, setRevealed] = useState(false);
   const [fast, setFast] = useState(false);
 
   const sourceItems = useMemo(
@@ -110,7 +111,8 @@ export function UpgradeClient({ balance, inventory, allItems }: Props) {
       : winSpan + margin + Math.random() * Math.max(1, 360 - winSpan - 2 * margin);
     if (fast) {
       setNeedle(final);
-      return;
+      const t = setTimeout(() => setRevealed(true), 350);
+      return () => clearTimeout(t);
     }
     const target = 360 * 4 + final;
     const start = performance.now();
@@ -120,7 +122,11 @@ export function UpgradeClient({ balance, inventory, allItems }: Props) {
       const t = Math.min(1, (now - start) / duration);
       const eased = 1 - Math.pow(1 - t, 3);
       setNeedle(target * eased);
-      if (t < 1) raf = requestAnimationFrame(tick);
+      if (t < 1) {
+        raf = requestAnimationFrame(tick);
+      } else {
+        setRevealed(true);
+      }
     };
     raf = requestAnimationFrame(tick);
     return () => cancelAnimationFrame(raf);
@@ -130,6 +136,7 @@ export function UpgradeClient({ balance, inventory, allItems }: Props) {
     if (busy || !target || sourceValue <= 0 || target.price <= sourceValue) return;
     setBusy(true);
     setResult(null);
+    setRevealed(false);
     setNeedle(0);
     try {
       const res = await fetch("/api/upgrade/attempt", {
@@ -157,10 +164,13 @@ export function UpgradeClient({ balance, inventory, allItems }: Props) {
       const settle = fast ? 700 : 2700;
       setTimeout(() => {
         router.refresh();
-        setPicked([]);
-        setCoinAmount(0);
         setBusy(false);
       }, settle);
+      // Clear sources slightly after reveal so the player sees their winning state.
+      setTimeout(() => {
+        setPicked([]);
+        setCoinAmount(0);
+      }, settle + 800);
     } catch {
       setBusy(false);
     }
@@ -209,19 +219,19 @@ export function UpgradeClient({ balance, inventory, allItems }: Props) {
             <ChanceDial
               chance={chance}
               needleAngle={needle}
-              won={result?.won ?? null}
+              won={revealed && result ? result.won : null}
               targetImage={target?.imageUrl}
               targetRarityColor={target ? RARITY_COLOR[target.rarity] : undefined}
             />
             <div className="text-xs text-[color:var(--muted)] uppercase tracking-wider">Шанс победы</div>
             <div
               className={`text-3xl font-extrabold ${
-                result?.won === true ? "text-emerald-300" : result?.won === false ? "text-red-300" : "text-orange-300"
+                revealed && result?.won === true ? "text-emerald-300" : revealed && result?.won === false ? "text-red-300" : "text-orange-300"
               }`}
             >
               {(chance * 100).toFixed(2)}%
             </div>
-            {result && (
+            {revealed && result && (
               <div
                 className={`px-3 py-1.5 rounded-lg text-sm font-semibold ${
                   result.won
@@ -549,24 +559,29 @@ function ChanceDial({
         </g>
 
         {/* Hub */}
-        <circle cx={c} cy={c} r={50} fill="var(--background-card)" stroke={ringColor} strokeWidth={2} opacity={0.95} />
+        <circle cx={c} cy={c} r={78} fill="var(--background-card)" stroke={ringColor} strokeWidth={2} opacity={0.95} />
+        <circle cx={c} cy={c} r={78} fill="none" stroke={ringColor} strokeWidth={1} opacity={0.4} strokeDasharray="3 3" />
       </svg>
 
-      {/* Inner content (target + chance) */}
+      {/* Inner content — absolutely centered using flex on full overlay */}
       <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-        <div className="flex flex-col items-center gap-1" style={{ width: 96, height: 96 }}>
-          {targetImage ? (
-            // eslint-disable-next-line @next/next/no-img-element
-            <img
-              src={targetImage}
-              alt=""
-              className="max-w-[80%] max-h-[80%] object-contain drop-shadow-[0_0_10px_rgba(255,180,71,0.4)]"
-              style={{ filter: targetRarityColor ? `drop-shadow(0 0 6px ${targetRarityColor}aa)` : undefined }}
-            />
-          ) : (
-            <div className="text-white/30 text-3xl">?</div>
-          )}
-        </div>
+        {targetImage ? (
+          // eslint-disable-next-line @next/next/no-img-element
+          <img
+            src={targetImage}
+            alt=""
+            className="object-contain"
+            style={{
+              width: 132,
+              height: 132,
+              filter: targetRarityColor
+                ? `drop-shadow(0 0 14px ${targetRarityColor}aa) drop-shadow(0 0 4px ${targetRarityColor})`
+                : "drop-shadow(0 0 10px rgba(255,180,71,0.5))",
+            }}
+          />
+        ) : (
+          <div className="text-white/30 text-4xl">?</div>
+        )}
       </div>
     </div>
   );
