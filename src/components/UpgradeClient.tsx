@@ -38,6 +38,7 @@ export function UpgradeClient({ balance, inventory, allItems }: Props) {
   const [busy, setBusy] = useState(false);
   const [needle, setNeedle] = useState<number>(0); // angle in degrees [0..360]
   const [result, setResult] = useState<null | { won: boolean; chance: number; targetName: string }>(null);
+  const [fast, setFast] = useState(false);
 
   const sourceItems = useMemo(
     () => picked.map((id) => inventory.find((i) => i.id === id)).filter(Boolean) as InventoryEntry[],
@@ -112,7 +113,11 @@ export function UpgradeClient({ balance, inventory, allItems }: Props) {
     const final = result.won
       ? Math.random() * Math.max(1, winSpan - 4) + 2
       : winSpan + Math.random() * Math.max(1, 360 - winSpan - 4) + 2;
-    const target = 360 * 4 + final; // 4 full spins + final position
+    if (fast) {
+      setNeedle(final);
+      return;
+    }
+    const target = 360 * 4 + final;
     const start = performance.now();
     const duration = 2400;
     let raf = 0;
@@ -124,7 +129,7 @@ export function UpgradeClient({ balance, inventory, allItems }: Props) {
     };
     raf = requestAnimationFrame(tick);
     return () => cancelAnimationFrame(raf);
-  }, [result]);
+  }, [result, fast]);
 
   async function attempt() {
     if (busy || !target || sourceValue <= 0 || target.price <= sourceValue) return;
@@ -148,12 +153,13 @@ export function UpgradeClient({ balance, inventory, allItems }: Props) {
         return;
       }
       setResult({ won: data.won, chance: data.chance, targetName: target.name });
+      const settle = fast ? 600 : 2700;
       setTimeout(() => {
         router.refresh();
         setPicked([]);
         setCoinAmount(0);
         setBusy(false);
-      }, 2700);
+      }, settle);
     } catch {
       setBusy(false);
     }
@@ -163,11 +169,18 @@ export function UpgradeClient({ balance, inventory, allItems }: Props) {
 
   return (
     <div className="space-y-4">
-      <div className="flex flex-col items-center gap-1">
-        <h1 className="text-2xl font-bold uppercase tracking-wider">Модернизация оружия 2.0</h1>
+      <div className="flex flex-col items-center gap-1 relative">
+        <h1 className="text-2xl md:text-3xl font-extrabold uppercase tracking-wider bg-gradient-to-r from-orange-400 to-amber-300 bg-clip-text text-transparent">Модернизация оружия 2.0</h1>
         <p className="text-[color:var(--muted)] text-sm">
           Отдай до {MAX_SOURCES} предметов и/или монет, чтобы получить шанс на более редкое оружие.
         </p>
+        <label className="absolute right-0 top-1 inline-flex items-center gap-2 text-xs select-none cursor-pointer">
+          <span className={`relative inline-block w-9 h-5 rounded-full transition ${fast ? "bg-orange-500" : "bg-white/10"}`}>
+            <span className={`absolute top-0.5 w-4 h-4 rounded-full bg-white transition ${fast ? "left-[18px]" : "left-0.5"}`} />
+          </span>
+          <input type="checkbox" className="sr-only" checked={fast} onChange={(e) => setFast(e.target.checked)} />
+          <span className="text-white/80">Быстрая прокрутка</span>
+        </label>
       </div>
 
       <div className="grid lg:grid-cols-[1fr_minmax(280px,360px)_1fr] gap-4">
@@ -228,11 +241,11 @@ export function UpgradeClient({ balance, inventory, allItems }: Props) {
               step={10}
               value={Math.min(coinAmount, balance)}
               onChange={(e) => setCoinAmount(Number(e.target.value))}
-              className="w-full accent-orange-500"
+              className="w-full range-orange"
             />
           </div>
           <button onClick={attempt} disabled={!canFire} className="btn-primary w-full uppercase tracking-wider">
-            {busy ? "Крутим…" : "Прокачать"}
+            {busy ? (fast ? "Считаем…" : "Крутим…") : "Прокачать"}
           </button>
           <div className="flex gap-1 flex-wrap justify-center">
             {QUICK_MULTS.map((m) => (

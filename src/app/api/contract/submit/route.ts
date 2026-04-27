@@ -4,50 +4,87 @@ import { prisma } from "@/lib/db";
 import { getCurrentUser } from "@/lib/auth";
 
 const Schema = z.object({
-  inventoryIds: z.array(z.string()).length(10),
+  inventoryIds: z.array(z.string()).min(3).max(10),
+  targetItemId: z.string().nullable().optional(),
+  priceMin: z.number().int().min(0).optional(),
+  priceMax: z.number().int().min(0).optional(),
 });
+
+const HOUSE_EDGE = 0.9;
 
 export async function POST(req: Request) {
   const user = await getCurrentUser();
   if (!user) return NextResponse.json({ error: "Не авторизован" }, { status: 401 });
 
   const parsed = Schema.safeParse(await req.json().catch(() => null));
-  if (!parsed.success) return NextResponse.json({ error: "Нужно ровно 10 предметов" }, { status: 400 });
+  if (!parsed.success) {
+    return NextResponse.json({ error: "Нужно от 3 до 10 предметов" }, { status: 400 });
+  }
+  const { inventoryIds, targetItemId, priceMin, priceMax } = parsed.data;
+
+  const uniqIds = Array.from(new Set(inventoryIds));
+  if (uniqIds.length !== inventoryIds.length) {
+    return NextResponse.json({ error: "Дубликаты предметов" }, { status: 400 });
+  }
 
   const items = await prisma.inventoryItem.findMany({
     where: {
-      id: { in: parsed.data.inventoryIds },
+      id: { in: uniqIds },
       userId: user.id,
       status: "owned",
     },
     include: { item: true },
   });
 
-  if (items.length !== 10) {
+  if (items.length !== uniqIds.length) {
     return NextResponse.json({ error: "Один или несколько предметов недоступны" }, { status: 400 });
   }
 
   const total = items.reduce((s, i) => s + i.item.price, 0);
   const avg = total / items.length;
-  // House edge: 90% of avg as base reward target.
-  const targetPrice = Math.round(avg * 0.9);
+  // Reward target value: average × house edge.
+  const baseReward = Math.max(10, Math.round(avg * HOUSE_EDGE));
 
-  // Choose a candidate item with price near targetPrice (within ±50%).
-  const candidates = await prisma.item.findMany({
-    where: {
-      price: {
-        gte: Math.max(10, Math.floor(targetPrice * 0.5)),
-        lte: Math.ceil(targetPrice * 1.5),
+  let winner: { id: string; name: string; price: number; rarity: string; imageUrl: string } | null = null;
+
+  if (targetItemId) {
+    // Specific target requested. Probability = (avg * HOUSE_EDGE / target.price), capped.
+    const target = await prisma.item.findUnique({ where: { id: targetItemId } });
+    if (!target) return NextResponse.json({ error: "Цель не найдена" }, { status: 404 });
+    const p = Math.min(0.95, Math.max(0, (avg * HOUSE_EDGE) / target.price));
+    if (Math.random() < p) {
+      winner = target;
+    } else {
+      // On loss with specific target: produce a small consolation item near baseReward × 0.3
+      const consolationTarget = Math.max(10, Math.round(baseReward * 0.3));
+      const pool = await prisma.item.findMany({
+        where: {
+          price: { gte: Math.max(10, Math.floor(consolationTarget * 0.5)), lte: Math.ceil(consolationTarget * 1.5) },
+        },
+        take: 200,
+      });
+      const fallback = pool.length > 0 ? pool : await prisma.item.findMany({ take: 50, orderBy: { price: "asc" } });
+      winner = fallback[Math.floor(Math.random() * fallback.length)];
+    }
+  } else {
+    // Random mode: pick a candidate item near baseReward, optionally constrained by price filter.
+    const minP = priceMin ?? Math.max(10, Math.floor(baseReward * 0.5));
+    const maxP = priceMax ?? Math.ceil(baseReward * 1.5);
+    const candidates = await prisma.item.findMany({
+      where: {
+        price: { gte: Math.max(10, minP), lte: Math.max(maxP, minP + 10) },
       },
-    },
-  });
+      take: 400,
+    });
+    const pool = candidates.length > 0 ? candidates : await prisma.item.findMany({ take: 100 });
+    winner = pool[Math.floor(Math.random() * pool.length)];
+  }
 
-  const pool = candidates.length > 0 ? candidates : await prisma.item.findMany({ take: 100 });
-  const winner = pool[Math.floor(Math.random() * pool.length)];
+  if (!winner) return NextResponse.json({ error: "Не удалось подобрать награду" }, { status: 500 });
 
   await prisma.$transaction([
     prisma.inventoryItem.updateMany({
-      where: { id: { in: parsed.data.inventoryIds }, userId: user.id, status: "owned" },
+      where: { id: { in: uniqIds }, userId: user.id, status: "owned" },
       data: { status: "contracted" },
     }),
     prisma.inventoryItem.create({

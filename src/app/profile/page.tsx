@@ -119,6 +119,8 @@ function kindLabel(k: string): string {
       return "Демо-бонус";
     case "open":
       return "Открытие кейса";
+    case "open_multi":
+      return "Мульти-открытие кейсов";
     case "sell":
       return "Продажа предмета";
     case "upgrade_win":
