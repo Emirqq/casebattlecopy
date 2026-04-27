@@ -125,6 +125,8 @@ function kindLabel(k: string): string {
       return "Апгрейд: победа";
     case "upgrade_lose":
       return "Апгрейд: проигрыш";
+    case "upgrade_stake":
+      return "Апгрейд: ставка";
     case "contract":
       return "Контракт";
     case "battle_join":
