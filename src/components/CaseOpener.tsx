@@ -159,26 +159,30 @@ function Reel({
   won: Item | null;
 }) {
   // Each card is 128px wide + 12px gap.
-  const cardWidth = 140;
+  const CARD_WIDTH = 128;
+  const GAP = 12;
+  const STEP = CARD_WIDTH + GAP; // 140
   const offset = useMemo(() => {
     if (!reel) return 0;
-    // We want winner card centered on the marker. Marker sits at viewport center.
-    return -(winnerIdx * cardWidth) + cardWidth / 2;
-  }, [reel, winnerIdx]);
+    // Reel inner is positioned with its left edge at the marker (left-1/2).
+    // Card N's center sits at (N * STEP) + CARD_WIDTH/2 from the inner-left.
+    // To park that center exactly on the marker we translate by the negative.
+    return -(winnerIdx * STEP + CARD_WIDTH / 2);
+  }, [reel, winnerIdx, STEP]);
 
   return (
     <div className="relative h-44 rounded-lg bg-black/30 border border-white/10 overflow-hidden">
       <div className="absolute top-0 bottom-0 left-1/2 w-px bg-orange-400/80 z-10 pointer-events-none" />
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-0 z-10 pointer-events-none">
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 z-10 pointer-events-none">
         <div className="w-3 h-3 bg-orange-400 rotate-45 -mt-1.5" />
       </div>
       {reel ? (
         <div
-          className={`flex absolute top-1/2 -translate-y-1/2 left-1/2 gap-3 px-1 ${won ? "" : "roll-animation"}`}
+          className={`flex absolute top-1/2 left-1/2 gap-3 ${won ? "" : "roll-animation"}`}
           style={
             won
               ? { transform: `translate(${offset}px, -50%)` }
-              : ({ ["--roll-end" as string]: `${offset}px` } as React.CSSProperties)
+              : ({ transform: "translate(0, -50%)", ["--roll-end" as string]: `${offset}px` } as React.CSSProperties)
           }
         >
           {reel.map((it, i) => (

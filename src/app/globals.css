@@ -49,10 +49,10 @@ body {
   .scrollbar-thin::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.1); border-radius: 4px; }
 }
 
-/* Spinner roller animation for case opening */
+/* Spinner roller animation for case opening — preserves Y-centering */
 @keyframes roll-x {
-  from { transform: translateX(0); }
-  to { transform: translateX(var(--roll-end, -3000px)); }
+  from { transform: translate(0, -50%); }
+  to { transform: translate(var(--roll-end, -3000px), -50%); }
 }
 
 .roll-animation {
