@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #0d111a;
+  --background-elevated: #171c25;
+  --background-card: #1f2531;
+  --foreground: #e4e7ec;
+  --muted: #8a93a4;
+  --accent: #ff7a1a;
+  --accent-2: #ffb547;
+  --border: #2a3242;
+}
+
+html, body {
+  background: var(--background);
+  color: var(--foreground);
+  min-height: 100vh;
+}
+
+body {
+  font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+@layer components {
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-lg px-4 py-2 font-semibold transition active:scale-[0.97] disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+  .btn-primary {
+    @apply btn text-white;
+    background: linear-gradient(135deg, #ff7a1a 0%, #ffb547 100%);
+    box-shadow: 0 6px 24px -8px rgba(255, 122, 26, 0.6);
+  }
+  .btn-primary:hover { filter: brightness(1.07); }
+  .btn-ghost {
+    @apply btn text-white/90 bg-white/5 hover:bg-white/10 border border-white/10;
+  }
+  .card {
+    @apply rounded-xl border border-white/10 bg-[var(--background-card)] overflow-hidden;
+  }
+  .price-badge {
+    @apply inline-flex items-center justify-center text-sm font-bold text-orange-300 border border-orange-400/40 rounded-md px-3 py-1 bg-orange-500/5;
+  }
+  .rarity-bar {
+    @apply h-1 rounded-full;
+  }
+  .scrollbar-thin::-webkit-scrollbar { width: 8px; height: 8px; }
+  .scrollbar-thin::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.1); border-radius: 4px; }
+}
+
+/* Spinner roller animation for case opening */
+@keyframes roll-x {
+  from { transform: translateX(0); }
+  to { transform: translateX(var(--roll-end, -3000px)); }
+}
+
+.roll-animation {
+  animation: roll-x 6s cubic-bezier(0.06, 0.5, 0.16, 1) forwards;
+}
