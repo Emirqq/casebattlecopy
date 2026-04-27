@@ -161,6 +161,73 @@ const CASE_DEFS: CaseDef[] = [
       Covert: 30,
     },
   },
+  {
+    slug: "knives",
+    name: "Холодная сталь",
+    imageUrl: "",
+    price: 4999,
+    filter: (s) =>
+      ["Bayonet", "Bowie Knife", "Butterfly Knife", "Falchion Knife", "Flip Knife", "Gut Knife", "Huntsman Knife", "Karambit", "Kukri Knife", "M9 Bayonet", "Nomad Knife", "Paracord Knife", "Skeleton Knife", "Survival Knife", "Talon Knife"].includes(s.weapon) ||
+      ["Classified", "Covert"].includes(s.rarity),
+    weights: {
+      Restricted: 35,
+      Classified: 45,
+      Covert: 18,
+      Extraordinary: 1.8,
+      Contraband: 0.2,
+    },
+  },
+  {
+    slug: "premium",
+    name: "Премиум",
+    imageUrl: "",
+    price: 2499,
+    filter: (s) => ["Classified", "Covert", "Contraband"].includes(s.rarity),
+    weights: {
+      Classified: 70,
+      Covert: 28,
+      Contraband: 2,
+    },
+  },
+  {
+    slug: "operation",
+    name: "Операция «Дракон»",
+    imageUrl: "",
+    price: 799,
+    filter: (s) => ["Restricted", "Classified", "Covert"].includes(s.rarity),
+    weights: {
+      Restricted: 65,
+      Classified: 28,
+      Covert: 7,
+    },
+  },
+  {
+    slug: "budget",
+    name: "Бюджетный",
+    imageUrl: "",
+    price: 99,
+    filter: (s) => ["Consumer Grade", "Industrial Grade", "Mil-Spec Grade", "Restricted"].includes(s.rarity),
+    weights: {
+      "Consumer Grade": 35,
+      "Industrial Grade": 35,
+      "Mil-Spec Grade": 25,
+      Restricted: 4,
+      Classified: 1,
+    },
+  },
+  {
+    slug: "huntsman",
+    name: "Охотник",
+    imageUrl: "",
+    price: 599,
+    filter: (s) => ["Mil-Spec Grade", "Restricted", "Classified"].includes(s.rarity) && s.weapon !== "AWP",
+    weights: {
+      "Mil-Spec Grade": 50,
+      Restricted: 35,
+      Classified: 13,
+      Covert: 2,
+    },
+  },
 ];
 
 async function main() {
