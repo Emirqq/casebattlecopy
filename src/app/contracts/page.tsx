@@ -10,11 +10,16 @@ export default async function ContractsPage() {
   const user = await getCurrentUser();
   if (!user) redirect("/login");
 
-  const inventory = await prisma.inventoryItem.findMany({
-    where: { userId: user.id, status: "owned" },
-    include: { item: true },
-    orderBy: { createdAt: "desc" },
-  });
+  const [inventory, allItems] = await Promise.all([
+    prisma.inventoryItem.findMany({
+      where: { userId: user.id, status: "owned" },
+      include: { item: true },
+      orderBy: { createdAt: "desc" },
+    }),
+    prisma.item.findMany({
+      orderBy: { price: "asc" },
+    }),
+  ]);
 
   return (
     <ContractsClient
@@ -29,6 +34,14 @@ export default async function ContractsPage() {
           rarity: i.item.rarity,
           weapon: i.item.weapon,
         }))}
+      allItems={allItems.map((i) => ({
+        id: i.id,
+        name: i.name,
+        imageUrl: i.imageUrl,
+        price: i.price,
+        rarity: i.rarity,
+        weapon: i.weapon,
+      }))}
     />
   );
 }
