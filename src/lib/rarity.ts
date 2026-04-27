@@ -34,14 +34,14 @@ export const RARITY_LABEL_RU: Record<string, string> = {
 };
 
 export const RARITY_PRICE_RANGE: Record<string, [number, number]> = {
-  "Consumer Grade": [20, 50],
-  "Industrial Grade": [60, 150],
-  "Mil-Spec Grade": [180, 400],
-  Restricted: [450, 1200],
-  Classified: [1300, 3500],
-  Covert: [3800, 9500],
-  Extraordinary: [4500, 11000],
-  Contraband: [9000, 15000],
+  "Consumer Grade": [20, 60],
+  "Industrial Grade": [70, 180],
+  "Mil-Spec Grade": [200, 500],
+  Restricted: [550, 1500],
+  Classified: [1800, 5500],
+  Covert: [6500, 22000],
+  Extraordinary: [12000, 45000],
+  Contraband: [60000, 250000],
 };
 
 export function rarityRank(r: string): number {

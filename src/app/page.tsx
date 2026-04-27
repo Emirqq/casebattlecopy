@@ -29,8 +29,7 @@ export default async function HomePage() {
               Виртуальная валюта, никаких реальных платежей. Стартовый баланс — 1000 монет, кнопка <span className="text-orange-300 font-semibold">+1000</span> в шапке всегда доступна.
             </p>
             <div className="flex flex-wrap gap-3 mt-6">
-              <Link href="/battles" className="btn-primary">⚔ Создать баттл</Link>
-              <Link href="/upgrade" className="btn-ghost">↗ Апгрейд</Link>
+              <Link href="/upgrade" className="btn-primary">↗ Апгрейд</Link>
               <Link href="/contracts" className="btn-ghost">⊟ Контракты</Link>
             </div>
           </div>

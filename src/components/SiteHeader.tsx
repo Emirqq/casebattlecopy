@@ -11,7 +11,6 @@ type Props = {
 
 const NAV = [
   { href: "/", label: "Кейсы" },
-  { href: "/battles", label: "Баттлы" },
   { href: "/upgrade", label: "Апгрейд" },
   { href: "/contracts", label: "Контракты" },
 ];

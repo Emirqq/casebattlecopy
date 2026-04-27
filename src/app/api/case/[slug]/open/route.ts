@@ -5,10 +5,10 @@ import { getCurrentUser } from "@/lib/auth";
 import { getCaseWithItems, rollCase } from "@/lib/cases";
 
 const Schema = z.object({
-  count: z.number().int().min(1).max(5).default(1),
+  count: z.number().int().min(1).max(10).default(1),
 });
 
-const ALLOWED_COUNTS = new Set([1, 2, 3, 5]);
+const ALLOWED_COUNTS = new Set([1, 2, 3, 5, 10]);
 
 export async function POST(req: Request, { params }: { params: { slug: string } }) {
   const user = await getCurrentUser();
@@ -34,35 +34,38 @@ export async function POST(req: Request, { params }: { params: { slug: string } 
 
   const items = Array.from({ length: count }, () => rollCase(caseRow));
 
-  await prisma.$transaction([
-    prisma.user.update({
+  // Create inventory items first to get their IDs in the response.
+  const created = await prisma.$transaction(async (tx) => {
+    await tx.user.update({
       where: { id: user.id },
       data: { balance: { decrement: totalCost } },
-    }),
-    prisma.transaction.create({
+    });
+    await tx.transaction.create({
       data: {
         userId: user.id,
         amount: -totalCost,
         kind: count > 1 ? "open_multi" : "open",
         meta: count > 1 ? `${caseRow.slug}×${count}` : caseRow.slug,
       },
-    }),
-    ...items.map((it) =>
-      prisma.inventoryItem.create({
+    });
+    const invIds: string[] = [];
+    for (const it of items) {
+      const inv = await tx.inventoryItem.create({
         data: { userId: user.id, itemId: it.id, source: "case" },
-      })
-    ),
-    ...items.map((it) =>
-      prisma.opening.create({
+      });
+      invIds.push(inv.id);
+      await tx.opening.create({
         data: { userId: user.id, caseId: caseRow.id, itemId: it.id },
-      })
-    ),
-  ]);
+      });
+    }
+    return invIds;
+  });
 
   return NextResponse.json({
     ok: true,
-    items: items.map((it) => ({
+    items: items.map((it, idx) => ({
       id: it.id,
+      inventoryId: created[idx],
       name: it.name,
       weapon: it.weapon,
       imageUrl: it.imageUrl,

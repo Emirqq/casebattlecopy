@@ -15,6 +15,8 @@ type Item = {
   rarity: string;
 };
 
+type Won = Item & { inventoryId: string };
+
 type Props = {
   slug: string;
   price: number;
@@ -25,7 +27,7 @@ type Props = {
 
 const REEL_LENGTH = 60;
 const WINNER_INDEX = 50;
-const COUNT_OPTIONS = [1, 2, 3, 5] as const;
+const COUNT_OPTIONS = [1, 2, 3, 5, 10] as const;
 
 type Count = (typeof COUNT_OPTIONS)[number];
 
@@ -33,7 +35,8 @@ export function CaseOpener({ slug, price, items, userBalance, loggedIn }: Props)
   const router = useRouter();
   const [busy, setBusy] = useState(false);
   const [reels, setReels] = useState<Item[][] | null>(null);
-  const [winners, setWinners] = useState<Item[] | null>(null);
+  const [winners, setWinners] = useState<Won[] | null>(null);
+  const [soldIds, setSoldIds] = useState<Set<string>>(new Set());
   const [error, setError] = useState<string | null>(null);
   const [count, setCount] = useState<Count>(1);
   const [fast, setFast] = useState(false);
@@ -56,6 +59,7 @@ export function CaseOpener({ slug, price, items, userBalance, loggedIn }: Props)
     setError(null);
     setWinners(null);
     setReels(null);
+    setSoldIds(new Set());
     try {
       const res = await fetch(`/api/case/${slug}/open`, {
         method: "POST",
@@ -68,17 +72,11 @@ export function CaseOpener({ slug, price, items, userBalance, loggedIn }: Props)
         setBusy(false);
         return;
       }
-      const wonItems: Item[] = data.items;
-      if (fast) {
-        setWinners(wonItems);
-        setBusy(false);
-        router.refresh();
-        return;
-      }
+      const wonItems: Won[] = data.items;
       const newReels = wonItems.map(buildReel);
       setReels(newReels);
 
-      const duration = 6200;
+      const duration = fast ? 1500 : 6200;
       setTimeout(() => {
         setWinners(wonItems);
         setBusy(false);
@@ -94,12 +92,67 @@ export function CaseOpener({ slug, price, items, userBalance, loggedIn }: Props)
     setReels(null);
     setWinners(null);
     setError(null);
+    setSoldIds(new Set());
+  }
+
+  async function sell(inventoryId: string) {
+    if (soldIds.has(inventoryId)) return;
+    setSoldIds((s) => {
+      const n = new Set(s);
+      n.add(inventoryId);
+      return n;
+    });
+    try {
+      const res = await fetch("/api/me/inventory/sell", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ inventoryId }),
+      });
+      if (res.ok) router.refresh();
+      else {
+        // Roll back optimistic flag on failure.
+        setSoldIds((s) => {
+          const n = new Set(s);
+          n.delete(inventoryId);
+          return n;
+        });
+      }
+    } catch {
+      setSoldIds((s) => {
+        const n = new Set(s);
+        n.delete(inventoryId);
+        return n;
+      });
+    }
+  }
+
+  async function sellAll() {
+    if (!winners) return;
+    const remaining = winners.filter((w) => !soldIds.has(w.inventoryId));
+    if (remaining.length === 0) return;
+    setSoldIds(new Set(winners.map((w) => w.inventoryId)) as Set<string>);
+    try {
+      await Promise.all(
+        remaining.map((w) =>
+          fetch("/api/me/inventory/sell", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ inventoryId: w.inventoryId }),
+          })
+        )
+      );
+      router.refresh();
+    } catch {
+      // No-op; partial state will be visible via balance refresh.
+    }
   }
 
   const reelsToRender: (Item[] | null)[] = useMemo(() => {
     if (reels) return reels;
     return Array.from({ length: count }, () => null);
   }, [reels, count]);
+
+  const showCompactReels = count >= 5;
 
   return (
     <div className="card p-4 space-y-4">
@@ -134,22 +187,43 @@ export function CaseOpener({ slug, price, items, userBalance, loggedIn }: Props)
       {/* Reels grid (or single reel) */}
       <div
         className={`grid gap-3 ${
-          count === 1 ? "grid-cols-1" : count === 2 ? "grid-cols-1 md:grid-cols-2" : count === 3 ? "grid-cols-1 md:grid-cols-3" : "grid-cols-2 md:grid-cols-5"
+          count === 1
+            ? "grid-cols-1"
+            : count === 2
+            ? "grid-cols-1 md:grid-cols-2"
+            : count === 3
+            ? "grid-cols-1 md:grid-cols-3"
+            : count === 5
+            ? "grid-cols-2 md:grid-cols-5"
+            : "grid-cols-2 md:grid-cols-5"
         }`}
       >
         {reelsToRender.map((r, i) => (
-          <Reel key={i} reel={r} winnerIdx={WINNER_INDEX} won={winners?.[i] ?? null} fast={fast} compact={count > 1} />
+          <Reel
+            key={i}
+            reel={r}
+            winnerIdx={WINNER_INDEX}
+            won={winners?.[i] ?? null}
+            fast={fast}
+            compact={showCompactReels}
+          />
         ))}
       </div>
 
-      {/* Action row */}
+      {/* Action / result panel */}
       {!loggedIn ? (
         <div className="flex items-center justify-between">
           <p className="text-sm text-[color:var(--muted)]">Войдите, чтобы открывать кейсы.</p>
           <Link href="/login" className="btn-primary">Войти</Link>
         </div>
       ) : winners ? (
-        <WinnersPanel winners={winners} onReset={reset} busy={busy} />
+        <WinnersPanel
+          winners={winners}
+          onReset={reset}
+          onSell={sell}
+          onSellAll={sellAll}
+          soldIds={soldIds}
+        />
       ) : (
         <div className="flex flex-col sm:flex-row sm:items-center gap-3 justify-between">
           <div className="text-sm text-[color:var(--muted)]">
@@ -158,18 +232,8 @@ export function CaseOpener({ slug, price, items, userBalance, loggedIn }: Props)
               <span className="ml-2">· Стоимость <span className="text-orange-300 font-semibold">{formatCoins(totalPrice)}</span></span>
             )}
           </div>
-          <button
-            onClick={open}
-            disabled={busy || !canAfford}
-            className="btn-primary"
-          >
-            {busy
-              ? fast
-                ? "Открываем…"
-                : "Крутим…"
-              : count > 1
-              ? `Открыть ×${count} за ${formatCoins(totalPrice)}`
-              : `Открыть за ${formatCoins(totalPrice)}`}
+          <button onClick={open} disabled={busy || !canAfford} className="btn-primary">
+            {busy ? "Крутим…" : count > 1 ? `Открыть ×${count} за ${formatCoins(totalPrice)}` : `Открыть за ${formatCoins(totalPrice)}`}
           </button>
         </div>
       )}
@@ -178,72 +242,113 @@ export function CaseOpener({ slug, price, items, userBalance, loggedIn }: Props)
   );
 }
 
-function WinnersPanel({ winners, onReset, busy }: { winners: Item[]; onReset: () => void; busy: boolean }) {
+function WinnersPanel({
+  winners,
+  onReset,
+  onSell,
+  onSellAll,
+  soldIds,
+}: {
+  winners: Won[];
+  onReset: () => void;
+  onSell: (id: string) => void;
+  onSellAll: () => void;
+  soldIds: Set<string>;
+}) {
   const total = winners.reduce((s, w) => s + w.price, 0);
-  const rare = [...winners].sort((a, b) => b.price - a.price)[0];
+  const remaining = winners.reduce((s, w) => s + (soldIds.has(w.inventoryId) ? 0 : w.price), 0);
   const isMulti = winners.length > 1;
-  return (
-    <div className={`rounded-xl border border-white/10 bg-white/[0.02] p-3 ${isMulti ? "" : "flex items-center justify-between gap-3 flex-wrap"}`}>
-      {isMulti ? (
-        <div className="space-y-3">
-          <div className="flex items-center gap-3 flex-wrap text-sm">
-            <span className="text-[color:var(--muted)]">Получено:</span>
-            <span className="text-orange-300 font-bold text-lg">{formatCoins(total)}</span>
-            <span className="text-[color:var(--muted)]">монет общей стоимости</span>
-            <span className="text-[color:var(--muted)]">·</span>
-            <span className="text-white">самый редкий — </span>
-            <span className="font-semibold" style={{ color: RARITY_COLOR[rare.rarity] }}>{rare.name}</span>
-          </div>
-          <div className="flex items-center justify-end">
-            <button onClick={onReset} disabled={busy} className="btn-primary">Открыть ещё</button>
-          </div>
-        </div>
-      ) : (
-        <>
-          <div className="flex items-center gap-3">
-            <div
-              className="w-14 h-14 rounded-lg bg-white/5 flex items-center justify-center border drop-reveal"
-              style={{ borderColor: RARITY_COLOR[winners[0].rarity] }}
-            >
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src={winners[0].imageUrl} alt={winners[0].name} className="max-w-full max-h-full object-contain" />
-            </div>
-            <div>
-              <div className="text-xs uppercase" style={{ color: RARITY_COLOR[winners[0].rarity] }}>
-                {RARITY_LABEL_RU[winners[0].rarity] ?? winners[0].rarity}
-              </div>
-              <div className="font-semibold">{winners[0].name}</div>
-              <div className="text-orange-300 text-sm font-bold">{formatCoins(winners[0].price)} монет</div>
-            </div>
-          </div>
-          <div className="flex gap-2">
-            <SellLastButton />
-            <button onClick={onReset} disabled={busy} className="btn-primary">
-              Открыть ещё
-            </button>
-          </div>
-        </>
-      )}
-    </div>
-  );
-}
 
-function SellLastButton() {
-  const router = useRouter();
-  const [busy, setBusy] = useState(false);
-  async function sell() {
-    setBusy(true);
-    try {
-      const res = await fetch("/api/me/inventory/sell-last", { method: "POST" });
-      if (res.ok) router.refresh();
-    } finally {
-      setBusy(false);
-    }
+  if (!isMulti) {
+    const w = winners[0];
+    const sold = soldIds.has(w.inventoryId);
+    return (
+      <div className="rounded-xl border border-white/10 bg-white/[0.02] p-4 flex flex-col items-center gap-3 drop-reveal">
+        <div
+          className="w-32 h-32 rounded-lg bg-white/5 flex items-center justify-center border-2"
+          style={{
+            borderColor: RARITY_COLOR[w.rarity],
+            boxShadow: `0 0 36px -4px ${RARITY_COLOR[w.rarity]}`,
+          }}
+        >
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img src={w.imageUrl} alt={w.name} className="max-w-full max-h-full object-contain" />
+        </div>
+        <div className="text-center">
+          <div className="text-xs uppercase tracking-wider" style={{ color: RARITY_COLOR[w.rarity] }}>
+            {RARITY_LABEL_RU[w.rarity] ?? w.rarity}
+          </div>
+          <div className="font-semibold text-lg">{w.name}</div>
+        </div>
+        <div className="flex gap-2 items-center">
+          <button
+            onClick={() => onSell(w.inventoryId)}
+            disabled={sold}
+            className="btn-ghost"
+          >
+            {sold ? "Продано" : `Продать за ${formatCoins(w.price)}`}
+          </button>
+          <button onClick={onReset} className="btn-primary">
+            Ещё
+          </button>
+        </div>
+      </div>
+    );
   }
+
   return (
-    <button onClick={sell} disabled={busy} className="btn-ghost">
-      Продать последний
-    </button>
+    <div className="rounded-xl border border-white/10 bg-white/[0.02] p-4 space-y-4">
+      <div className="flex items-center justify-between flex-wrap gap-2">
+        <div className="text-sm">
+          Получено: <span className="text-orange-300 font-bold text-lg">{formatCoins(total)}</span> монет общей стоимости
+          {remaining !== total && (
+            <span className="ml-2 text-[color:var(--muted)]">
+              · осталось <span className="text-orange-300 font-semibold">{formatCoins(remaining)}</span>
+            </span>
+          )}
+        </div>
+        <div className="flex gap-2">
+          <button onClick={onSellAll} disabled={remaining === 0} className="btn-ghost">
+            Продать всё за {formatCoins(remaining)}
+          </button>
+          <button onClick={onReset} className="btn-primary">Ещё</button>
+        </div>
+      </div>
+      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-2">
+        {winners.map((w) => {
+          const sold = soldIds.has(w.inventoryId);
+          return (
+            <div
+              key={w.inventoryId}
+              className={`rounded-lg border p-2 flex flex-col items-center bg-black/30 transition ${sold ? "opacity-40" : ""}`}
+              style={{
+                borderColor: `${RARITY_COLOR[w.rarity]}88`,
+                boxShadow: sold ? undefined : `0 0 14px -4px ${RARITY_COLOR[w.rarity]}`,
+              }}
+            >
+              <div
+                className="rarity-bar w-full mb-1"
+                style={{ background: RARITY_COLOR[w.rarity] }}
+              />
+              <div className="aspect-[4/3] w-full flex items-center justify-center">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src={w.imageUrl} alt={w.name} className="max-w-full max-h-full object-contain" />
+              </div>
+              <div className="text-[11px] text-center mt-1 truncate w-full">
+                {w.name.split("|")[1]?.trim() ?? w.name}
+              </div>
+              <button
+                onClick={() => onSell(w.inventoryId)}
+                disabled={sold}
+                className="mt-1 w-full text-[11px] py-1 rounded-md bg-orange-500/15 hover:bg-orange-500/25 text-orange-200 border border-orange-400/30 disabled:opacity-50"
+              >
+                {sold ? "Продано" : `Продать за ${formatCoins(w.price)}`}
+              </button>
+            </div>
+          );
+        })}
+      </div>
+    </div>
   );
 }
 
@@ -271,10 +376,8 @@ function Reel({
   const animClass = won ? "" : fast ? "roll-animation-fast" : "roll-animation";
 
   return (
-    <div className={`relative ${compact ? "h-36" : "h-44"} rounded-lg bg-black/40 border border-white/10 overflow-hidden`}>
-      {/* Background subtle gradient stripes */}
+    <div className={`relative ${compact ? "h-32" : "h-44"} rounded-lg bg-black/40 border border-white/10 overflow-hidden`}>
       <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(255,255,255,0.04)_0,transparent_30%,transparent_70%,rgba(255,255,255,0.04)_100%)] pointer-events-none" />
-      {/* Marker */}
       <div className="absolute top-0 bottom-0 left-1/2 w-px bg-orange-400/80 z-10 pointer-events-none shadow-[0_0_12px_rgba(255,122,26,0.7)]" />
       <div className="absolute top-0 left-1/2 -translate-x-1/2 z-10 pointer-events-none">
         <div className="w-3 h-3 bg-orange-400 rotate-45 -mt-1.5" />
@@ -293,16 +396,13 @@ function Reel({
             return (
               <div
                 key={i}
-                className={`shrink-0 ${compact ? "w-24 h-28" : "w-32 h-32"} rounded-lg border bg-[var(--background-card)] flex flex-col items-center justify-center p-2 transition-all`}
+                className={`shrink-0 ${compact ? "w-24 h-28" : "w-32 h-36"} rounded-lg border bg-[var(--background-card)] flex flex-col items-center justify-center p-2 transition-all`}
                 style={{
                   borderColor: isWinner ? RARITY_COLOR[it.rarity] : `${RARITY_COLOR[it.rarity] ?? "#444"}55`,
                   boxShadow: isWinner ? `0 0 30px -4px ${RARITY_COLOR[it.rarity]}` : undefined,
                 }}
               >
-                <div
-                  className="rarity-bar w-full mb-1"
-                  style={{ background: RARITY_COLOR[it.rarity] ?? "#888" }}
-                />
+                <div className="rarity-bar w-full mb-1" style={{ background: RARITY_COLOR[it.rarity] ?? "#888" }} />
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img src={it.imageUrl} alt={it.name} className="max-h-[60%] max-w-full object-contain" />
                 <div className={`${compact ? "text-[10px]" : "text-xs"} text-center mt-1 truncate w-full`}>

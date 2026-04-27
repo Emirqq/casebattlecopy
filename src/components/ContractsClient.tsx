@@ -1,40 +1,42 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { useRouter } from "next/navigation";
 import { InventoryEntry } from "@/components/InventoryGrid";
 import { formatCoins } from "@/lib/format";
 import { RARITY_COLOR, RARITY_LABEL_RU } from "@/lib/rarity";
 
-type Item = {
-  id: string;
-  name: string;
-  imageUrl: string;
-  price: number;
-  rarity: string;
-  weapon: string | null;
-};
-
-type Props = {
-  inventory: InventoryEntry[];
-  allItems: Item[];
-};
+type Props = { inventory: InventoryEntry[] };
 
 const MIN = 3;
 const MAX = 10;
+const HOUSE_EDGE = 0.9;
+const MIN_FACTOR = 0.5;
+const MAX_FACTOR = 1.5;
 
-export function ContractsClient({ inventory, allItems }: Props) {
+export function ContractsClient({ inventory }: Props) {
   const router = useRouter();
   const [picked, setPicked] = useState<string[]>([]);
   const [busy, setBusy] = useState(false);
-  const [result, setResult] = useState<null | { name: string; price: number; rarity: string; imageUrl: string }>(null);
+  const [result, setResult] = useState<null | {
+    name: string;
+    price: number;
+    rarity: string;
+    imageUrl: string;
+    range: { min: number; max: number; expected: number };
+  }>(null);
   const [error, setError] = useState<string | null>(null);
+  const [hasSignature, setHasSignature] = useState(false);
 
-  const [mode, setMode] = useState<"random" | "specific">("random");
-  const [targetItemId, setTargetItemId] = useState<string | null>(null);
-  const [priceMin, setPriceMin] = useState<string>("");
-  const [priceMax, setPriceMax] = useState<string>("");
-  const [search, setSearch] = useState("");
+  const pickedItems = useMemo(
+    () => picked.map((id) => inventory.find((i) => i.id === id)).filter(Boolean) as InventoryEntry[],
+    [picked, inventory]
+  );
+  const total = pickedItems.reduce((s, i) => s + i.price, 0);
+  const avg = picked.length > 0 ? total / picked.length : 0;
+  const expected = avg > 0 ? Math.max(10, Math.round(avg * HOUSE_EDGE)) : 0;
+  const minP = expected > 0 ? Math.max(10, Math.floor(expected * MIN_FACTOR)) : 0;
+  const maxP = expected > 0 ? Math.max(minP + 10, Math.ceil(expected * MAX_FACTOR)) : 0;
 
   function toggle(id: string) {
     setPicked((cur) => {
@@ -45,26 +47,9 @@ export function ContractsClient({ inventory, allItems }: Props) {
   }
   function clear() {
     setPicked([]);
+    setResult(null);
+    setError(null);
   }
-
-  const pickedItems = useMemo(
-    () => picked.map((id) => inventory.find((i) => i.id === id)).filter(Boolean) as InventoryEntry[],
-    [picked, inventory]
-  );
-  const total = pickedItems.reduce((s, i) => s + i.price, 0);
-  const avg = picked.length > 0 ? Math.round(total / picked.length) : 0;
-  const target = mode === "specific" ? allItems.find((i) => i.id === targetItemId) ?? null : null;
-  const targetChance =
-    target && picked.length > 0 ? Math.min(0.95, Math.max(0, (avg * 0.9) / target.price)) : null;
-
-  const filtered = useMemo(() => {
-    const min = priceMin === "" ? 0 : Number(priceMin);
-    const max = priceMax === "" ? Infinity : Number(priceMax);
-    return allItems
-      .filter((i) => i.price >= min && i.price <= max)
-      .filter((i) => !search || i.name.toLowerCase().includes(search.toLowerCase()))
-      .slice(0, 80);
-  }, [allItems, search, priceMin, priceMax]);
 
   async function submit() {
     if (busy) return;
@@ -72,21 +57,18 @@ export function ContractsClient({ inventory, allItems }: Props) {
       setError(`Выбери от ${MIN} до ${MAX} предметов`);
       return;
     }
+    if (!hasSignature) {
+      setError("Поставьте подпись в окошке справа");
+      return;
+    }
     setBusy(true);
     setError(null);
     setResult(null);
     try {
-      const body: Record<string, unknown> = {
-        inventoryIds: picked,
-      };
-      if (mode === "specific" && targetItemId) body.targetItemId = targetItemId;
-      if (priceMin !== "") body.priceMin = Number(priceMin);
-      if (priceMax !== "") body.priceMax = Number(priceMax);
-
       const res = await fetch("/api/contract/submit", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(body),
+        body: JSON.stringify({ inventoryIds: picked }),
       });
       const data = await res.json();
       if (!res.ok) {
@@ -94,7 +76,7 @@ export function ContractsClient({ inventory, allItems }: Props) {
         setBusy(false);
         return;
       }
-      setResult(data.item);
+      setResult({ ...data.item, range: data.range });
       setPicked([]);
       router.refresh();
     } finally {
@@ -108,22 +90,24 @@ export function ContractsClient({ inventory, allItems }: Props) {
   return (
     <div className="space-y-5">
       <div>
-        <h1 className="text-2xl md:text-3xl font-extrabold uppercase">Контракты</h1>
+        <h1 className="text-3xl md:text-4xl font-extrabold uppercase bg-gradient-to-r from-orange-400 to-amber-300 bg-clip-text text-transparent">
+          Контракты
+        </h1>
         <p className="text-[color:var(--muted)] text-sm">
-          Сдай от {MIN} до {MAX} предметов и получи новый — рандомный или конкретный с шансом.
+          Сдай от {MIN} до {MAX} предметов, поставь подпись и получи случайный скин в указанном диапазоне.
         </p>
       </div>
 
-      {/* Top slot strip */}
-      <div className="card p-4">
-        <div className="flex items-center justify-between mb-3 flex-wrap gap-2">
-          <div className="text-sm">
+      {/* Top: 10-slot strip + summary */}
+      <div className="card p-4 space-y-3">
+        <div className="flex items-center justify-between flex-wrap gap-2 text-sm">
+          <div>
             Выбрано: <span className="font-bold">{picked.length}/{MAX}</span> ·
             Сумма: <span className="text-orange-300 font-bold">{formatCoins(total)}</span> ·
-            Среднее: <span className="text-orange-300 font-bold">{formatCoins(avg)}</span>
+            Средняя: <span className="text-orange-300 font-bold">{formatCoins(Math.round(avg))}</span>
             {remainingToMin > 0 && (
               <span className="ml-3 text-orange-300/90 font-semibold">
-                Положить ещё минимум {remainingToMin} {plural(remainingToMin, ["предмет", "предмета", "предметов"])}
+                Положить ещё минимум {remainingToMin}
               </span>
             )}
           </div>
@@ -137,7 +121,11 @@ export function ContractsClient({ inventory, allItems }: Props) {
               key={i}
               onClick={s ? () => toggle(s.id) : undefined}
               className={`relative aspect-square rounded-lg border flex items-center justify-center p-1 ${
-                s ? "border-orange-400/40 bg-white/5 cursor-pointer hover:bg-white/10" : "border-dashed border-white/10 bg-black/20 text-white/20 text-xs"
+                s
+                  ? "bg-white/5 cursor-pointer hover:bg-white/10"
+                  : i < MIN
+                  ? "border-dashed border-orange-400/30 bg-orange-500/[0.04] text-orange-300/40 text-xs"
+                  : "border-dashed border-white/10 bg-black/20 text-white/20 text-xs"
               }`}
               style={s ? { borderColor: `${RARITY_COLOR[s.rarity]}88` } : undefined}
             >
@@ -155,11 +143,25 @@ export function ContractsClient({ inventory, allItems }: Props) {
             </div>
           ))}
         </div>
+
+        {/* Predicted price range */}
+        <div className="flex items-center gap-3 flex-wrap">
+          <div className="panel-title">Возможный диапазон цены</div>
+          {picked.length >= MIN ? (
+            <div className="flex items-baseline gap-2">
+              <span className="text-orange-300 font-extrabold text-2xl">{formatCoins(minP)}</span>
+              <span className="text-[color:var(--muted)]">—</span>
+              <span className="text-orange-300 font-extrabold text-2xl">{formatCoins(maxP)}</span>
+              <span className="text-xs text-[color:var(--muted)]">(ожидание ≈ {formatCoins(expected)})</span>
+            </div>
+          ) : (
+            <div className="text-sm text-white/40">Положи минимум {MIN} предмета, чтобы увидеть диапазон.</div>
+          )}
+        </div>
       </div>
 
-      {/* Bottom row: my items + reward picker */}
+      {/* Bottom: my items + signature */}
       <div className="grid lg:grid-cols-[1fr_minmax(320px,420px)] gap-4">
-        {/* My items */}
         <div className="card p-3">
           <div className="panel-title mb-2 flex items-center justify-between">
             <span>Мои предметы</span>
@@ -181,10 +183,7 @@ export function ContractsClient({ inventory, allItems }: Props) {
                     className={`text-left card p-2 transition ${isSelected ? "ring-2 ring-orange-400" : ""}`}
                     style={{ borderColor: `${RARITY_COLOR[it.rarity]}55` }}
                   >
-                    <div
-                      className="rarity-bar mb-1"
-                      style={{ background: RARITY_COLOR[it.rarity] ?? "#888" }}
-                    />
+                    <div className="rarity-bar mb-1" style={{ background: RARITY_COLOR[it.rarity] ?? "#888" }} />
                     <div className="aspect-[4/3] flex items-center justify-center bg-white/[0.02] rounded">
                       {/* eslint-disable-next-line @next/next/no-img-element */}
                       <img src={it.imageUrl} alt={it.name} className="max-h-full max-w-full object-contain" loading="lazy" />
@@ -203,120 +202,25 @@ export function ContractsClient({ inventory, allItems }: Props) {
           )}
         </div>
 
-        {/* Reward picker */}
         <div className="card p-4 flex flex-col gap-3">
-          <div className="panel-title">Вы получите предмет</div>
-
-          <div className="flex items-center gap-2 flex-wrap">
-            <span className="text-sm text-[color:var(--muted)]">Цель:</span>
-            <button
-              onClick={() => setMode("random")}
-              className={`px-3 py-1.5 rounded-lg text-sm border transition ${
-                mode === "random" ? "bg-orange-500/20 border-orange-400 text-orange-200" : "bg-white/5 border-white/10 hover:bg-white/10"
-              }`}
-            >
-              ⇄ Случайная
-            </button>
-            <button
-              onClick={() => setMode("specific")}
-              className={`px-3 py-1.5 rounded-lg text-sm border transition ${
-                mode === "specific" ? "bg-orange-500/20 border-orange-400 text-orange-200" : "bg-white/5 border-white/10 hover:bg-white/10"
-              }`}
-            >
-              ◎ Конкретная
-            </button>
-          </div>
-
-          <div className="flex items-center gap-2 flex-wrap">
-            <span className="text-xs text-[color:var(--muted)]">от</span>
-            <input
-              type="number"
-              placeholder="0"
-              value={priceMin}
-              onChange={(e) => setPriceMin(e.target.value)}
-              className="input-base w-20 px-2 py-1"
-            />
-            <span className="text-xs text-[color:var(--muted)]">до</span>
-            <input
-              type="number"
-              placeholder="∞"
-              value={priceMax}
-              onChange={(e) => setPriceMax(e.target.value)}
-              className="input-base w-24 px-2 py-1"
-            />
-            {mode === "specific" && (
-              <input
-                value={search}
-                onChange={(e) => setSearch(e.target.value)}
-                placeholder="Поиск…"
-                className="input-base flex-1 min-w-32 px-2 py-1"
-              />
-            )}
-          </div>
-
-          {mode === "random" ? (
-            <div className="rounded-lg border border-dashed border-white/10 p-4 text-center text-sm text-[color:var(--muted)]">
-              <div className="text-base text-white mb-1">Случайный предмет</div>
-              <div>
-                Цена в диапазоне <span className="text-orange-300 font-semibold">{priceMin || "0"}</span>{" "}
-                — <span className="text-orange-300 font-semibold">{priceMax || "∞"}</span>
-              </div>
-              <div className="mt-2 text-xs">Если не задать диапазон, выпадет предмет рядом со средней ценой ставки × 0.9.</div>
-            </div>
-          ) : (
-            <div className="space-y-2">
-              {target ? (
-                <div
-                  className="rounded-lg border p-3 flex items-center gap-3"
-                  style={{ borderColor: `${RARITY_COLOR[target.rarity]}88` }}
-                >
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img src={target.imageUrl} alt={target.name} className="w-16 h-16 object-contain" />
-                  <div className="flex-1 min-w-0">
-                    <div className="text-sm font-semibold truncate">{target.name}</div>
-                    <div className="text-orange-300 font-bold">{formatCoins(target.price)} монет</div>
-                    {targetChance !== null && (
-                      <div className="text-xs text-[color:var(--muted)]">
-                        Шанс: <span className="text-orange-300 font-bold">{(targetChance * 100).toFixed(2)}%</span>
-                      </div>
-                    )}
-                  </div>
-                  <button onClick={() => setTargetItemId(null)} className="btn-ghost !text-xs !px-2 !py-1">Сброс</button>
-                </div>
-              ) : (
-                <div className="rounded-lg border border-dashed border-white/10 p-3 text-center text-sm text-[color:var(--muted)]">
-                  Выберите предмет ниже
-                </div>
-              )}
-              <div className="grid grid-cols-3 sm:grid-cols-4 gap-2 max-h-56 overflow-auto scrollbar-thin">
-                {filtered.length === 0 && (
-                  <div className="col-span-full text-sm text-[color:var(--muted)] p-4 text-center">Ничего не найдено</div>
-                )}
-                {filtered.map((it) => (
-                  <button
-                    key={it.id}
-                    onClick={() => setTargetItemId(it.id)}
-                    className={`text-left card p-2 transition ${targetItemId === it.id ? "ring-2 ring-orange-400" : ""}`}
-                    style={{ borderColor: `${RARITY_COLOR[it.rarity]}55` }}
-                  >
-                    <div className="aspect-square flex items-center justify-center">
-                      {/* eslint-disable-next-line @next/next/no-img-element */}
-                      <img src={it.imageUrl} alt={it.name} className="max-h-full max-w-full object-contain" />
-                    </div>
-                    <div className="text-[10px] truncate">{it.name}</div>
-                    <div className="text-orange-300 text-[11px] font-bold">{formatCoins(it.price)}</div>
-                  </button>
-                ))}
-              </div>
-            </div>
-          )}
+          <div className="panel-title">Подпись</div>
+          <p className="text-xs text-[color:var(--muted)]">
+            Поставьте свою подпись (нарисуйте мышью или пальцем). Без подписи контракт не вступит в силу.
+          </p>
+          <SignaturePad onChange={setHasSignature} disabled={busy} />
 
           <button
             onClick={submit}
-            disabled={busy || picked.length < MIN || (mode === "specific" && !targetItemId)}
-            className="btn-primary w-full uppercase tracking-wider mt-1"
+            disabled={busy || picked.length < MIN || !hasSignature}
+            className="btn-primary w-full uppercase tracking-wider"
           >
-            {busy ? "Подписываем…" : picked.length < MIN ? `Положить ещё минимум ${remainingToMin}` : "Подписать контракт"}
+            {busy
+              ? "Подписываем…"
+              : picked.length < MIN
+              ? `Положить ещё минимум ${remainingToMin}`
+              : !hasSignature
+              ? "Поставьте подпись"
+              : "Подписать контракт"}
           </button>
           {error && <div className="text-sm text-red-400">{error}</div>}
           {result && (
@@ -334,6 +238,9 @@ export function ContractsClient({ inventory, allItems }: Props) {
                 </div>
                 <div className="font-semibold truncate">{result.name}</div>
                 <div className="text-orange-300 text-sm font-bold">{formatCoins(result.price)} монет</div>
+                <div className="text-[10px] text-[color:var(--muted)]">
+                  Диапазон был {formatCoins(result.range.min)} — {formatCoins(result.range.max)}
+                </div>
               </div>
             </div>
           )}
@@ -343,11 +250,83 @@ export function ContractsClient({ inventory, allItems }: Props) {
   );
 }
 
-function plural(n: number, forms: [string, string, string]) {
-  const a = Math.abs(n) % 100;
-  const b = a % 10;
-  if (a > 10 && a < 20) return forms[2];
-  if (b > 1 && b < 5) return forms[1];
-  if (b === 1) return forms[0];
-  return forms[2];
+function SignaturePad({ onChange, disabled }: { onChange: (has: boolean) => void; disabled: boolean }) {
+  const canvasRef = useRef<HTMLCanvasElement | null>(null);
+  const drawingRef = useRef(false);
+  const lastRef = useRef<{ x: number; y: number } | null>(null);
+  const [, setTick] = useState(0);
+
+  useEffect(() => {
+    const canvas = canvasRef.current;
+    if (!canvas) return;
+    const dpr = window.devicePixelRatio || 1;
+    const rect = canvas.getBoundingClientRect();
+    canvas.width = rect.width * dpr;
+    canvas.height = rect.height * dpr;
+    const ctx = canvas.getContext("2d");
+    if (ctx) ctx.scale(dpr, dpr);
+  }, []);
+
+  function getPos(e: React.PointerEvent) {
+    const canvas = canvasRef.current!;
+    const rect = canvas.getBoundingClientRect();
+    return { x: e.clientX - rect.left, y: e.clientY - rect.top };
+  }
+
+  function start(e: React.PointerEvent) {
+    if (disabled) return;
+    drawingRef.current = true;
+    lastRef.current = getPos(e);
+    (e.currentTarget as HTMLCanvasElement).setPointerCapture(e.pointerId);
+  }
+
+  function move(e: React.PointerEvent) {
+    if (!drawingRef.current || disabled) return;
+    const ctx = canvasRef.current?.getContext("2d");
+    if (!ctx || !lastRef.current) return;
+    const p = getPos(e);
+    ctx.strokeStyle = "#ffb547";
+    ctx.lineWidth = 2.5;
+    ctx.lineCap = "round";
+    ctx.lineJoin = "round";
+    ctx.beginPath();
+    ctx.moveTo(lastRef.current.x, lastRef.current.y);
+    ctx.lineTo(p.x, p.y);
+    ctx.stroke();
+    lastRef.current = p;
+    onChange(true);
+  }
+
+  function end() {
+    drawingRef.current = false;
+    lastRef.current = null;
+  }
+
+  function clearPad() {
+    const canvas = canvasRef.current;
+    if (!canvas) return;
+    const ctx = canvas.getContext("2d");
+    if (!ctx) return;
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    onChange(false);
+    setTick((t) => t + 1);
+  }
+
+  return (
+    <div className="space-y-2">
+      <div className="relative rounded-lg border border-orange-400/30 bg-white/[0.04] overflow-hidden h-40">
+        <canvas
+          ref={canvasRef}
+          className="w-full h-full touch-none cursor-crosshair"
+          onPointerDown={start}
+          onPointerMove={move}
+          onPointerUp={end}
+          onPointerCancel={end}
+          onPointerLeave={end}
+        />
+        <div className="absolute bottom-1 left-2 text-[10px] text-white/30 pointer-events-none">подпись здесь</div>
+      </div>
+      <button onClick={clearPad} disabled={disabled} className="btn-ghost text-xs">Очистить подпись</button>
+    </div>
+  );
 }
